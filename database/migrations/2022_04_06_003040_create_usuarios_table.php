@@ -16,7 +16,7 @@ class CreateUsuariosTable extends Migration
         Schema::create('usuarios', function (Blueprint $table) {
             $table->unsignedBigInteger('id');
 
-            $table->primary('cedula',15)->unique();
+            $table->string('cedula',15)->unique();
             $table->string('nombres',50);
             $table->string('apellidos',50);
             $table->string('correo',25);
