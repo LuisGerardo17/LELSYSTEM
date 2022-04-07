@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -131,6 +130,3 @@
         </div>
     </body>
 </html>
-=======
-@extends('layouts.homepage')
->>>>>>> frontend-LELSYSTEM
