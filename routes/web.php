@@ -18,4 +18,8 @@ Route::get('/', function () {
 });
 
 
+Route::get('/', function () {
+    return view('layouts.historia');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
