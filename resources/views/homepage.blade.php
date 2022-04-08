@@ -25,9 +25,8 @@
 								Quienes somos
 							</button>
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
-								<li><a class="dropdown-item color"
-										href="quienes somos/historia/historia.html">Historia</a></li>
-								<li><a class="dropdown-item color" href="quienes somos/Vision/vision.html">Vision</a>
+								<li><a class="dropdown-item color" href="{{route'(historia)'}}">Historia</a></li>
+								<li><a class="dropdown-item color" href="{{route'(vision)'}}">Vision</a>
 								</li>
 
 							</ul>
