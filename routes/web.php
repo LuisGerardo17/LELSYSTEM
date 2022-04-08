@@ -18,13 +18,7 @@ Route::get('/', function () {
 });
 
 
-Route::get( '/', function () {
-    return view('historia');
-});
-
-
-Route::get( '/', function () {
-    return view('vision');
-});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/layouts/historia', [App\Http\Controllers\HistoriaController::class, 'index'])->name('historia');
+Route::get('/layouts/vision', [App\Http\Controllers\VisionController::class, 'index'])->name('vision');
