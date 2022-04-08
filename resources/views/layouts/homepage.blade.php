@@ -27,7 +27,7 @@
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 								<li><a class="dropdown-item color"
 										href="quienes somos/historia/historia.html">Historia</a></li>
-								<li><a class="dropdown-item color" href="quienes somos/Vision/vision.html">vision</a>
+								<li><a class="dropdown-item color" href="quienes somos/Vision/vision.html">Visión</a>
 								</li>
 
 							</ul>
