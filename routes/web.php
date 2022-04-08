@@ -22,4 +22,9 @@ Route::get('/', function () {
     return view('layouts.historia');
 });
 
+
+Route::get('/', function () {
+    return view('layouts.vision');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
