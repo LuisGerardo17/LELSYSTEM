@@ -25,18 +25,16 @@ Route::get('/', function () {
     return view('historia');
 });
 
-<<<<<<< HEAD
+
 Route::get('/', function () {
     return view('layouts.vision');
 });
 
 
-=======
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
->>>>>>> frontend-LELSYSTEM
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
