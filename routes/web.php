@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\historia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +15,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
 
 Route::get('/', function () {
     return view('layouts.homepage');
 });
 Route::get('/', function () {
-    return view('layouts.historia');
+    return view('historia');
 });
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('layouts.vision');
 });
 
 
+=======
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+>>>>>>> frontend-LELSYSTEM
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
