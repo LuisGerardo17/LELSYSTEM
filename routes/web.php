@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\historia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,14 @@ Route::get('/', function () {
 });
 
 
+Route::get('/', function () {
+    return view('historia');
+});
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/layouts/historia', [App\Http\Controllers\HistoriaController::class, 'index'])->name('historia');
-Route::get('/layouts/vision', [App\Http\Controllers\VisionController::class, 'index'])->name('vision');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
