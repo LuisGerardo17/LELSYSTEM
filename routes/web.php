@@ -18,12 +18,12 @@ Route::get('/', function () {
 });
 
 
-Route::get( function () {
+Route::get( '/historia', function () {
     return view('layouts.historia');
 });
 
 
-Route::get( function () {
+Route::get( '/vision', function () {
     return view('layouts.vision');
 });
 
