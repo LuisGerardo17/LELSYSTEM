@@ -5,10 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  	   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-	 <link rel="stylesheet" href="{{ asset('static/css/estilos.css') }}"/>
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	<link href="estilos.css" rel="stylesheet">
 	<title>LELSISTEM</title>
 </head>
 
@@ -25,8 +25,9 @@
 								Quienes somos
 							</button>
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
-								<li><a class="dropdown-item color" href="{{route'(historia)'}}">{{__('Historia')}}</a></li>
-								<li><a class="dropdown-item color" href="{{route'(vision)'}}">{{__('Vision')}}</a>
+								<li><a class="dropdown-item color"
+										href="layouts/historia.html">Historia</a></li>
+								<li><a class="dropdown-item color" href="layouts/vision.html">vision</a>
 								</li>
 
 							</ul>
@@ -77,7 +78,7 @@
 											<li><a class="dropdown-item colorbajo"
 													href="quienes somos/historia/historia.html">Historia</a></li>
 											<li><a class="dropdown-item colorbajo"
-													href="quienes somos/Vision/vision.html">vision</a></li>
+													href="quienes somos/Vision/vision.html">Vision</a></li>
 
 										</ul>
 									</div>
