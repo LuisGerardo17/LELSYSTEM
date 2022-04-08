@@ -22,4 +22,7 @@ Route::get('/', function () {
     return view('layouts.historia');
 });
 
+Route::get('/', function () {
+    return view('layouts.homepage');
+});
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
