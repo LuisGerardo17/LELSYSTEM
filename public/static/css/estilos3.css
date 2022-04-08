@@ -1,0 +1,270 @@
+body{
+   background-image: url(../../img/FONDO.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+.logo{
+    margin: 0;
+    float: left;
+    margin-top: 12px;
+    margin-left: 30px;
+    font-size: 30px;
+    
+}
+.lista{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    margin-top: 10px;
+    border-radius: 40px;
+}
+.lista  li{
+    display: inline-block;
+    
+}
+.marign{
+    margin-top: 3px;
+    
+}
+.bajo{
+    display: none; 
+    
+}
+.fondobajo{
+   background-color: rgb(62, 65, 68); 
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    height: auto;
+}
+.nav-item{
+    margin-top: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.boton{
+    border: 0;
+    padding: 0;
+}
+.navbar{
+    padding: 0;
+}
+
+.marign{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+}
+.lista li a:hover {
+    background: rgba(255, 255, 255, 0.938);
+    color: rgb(0, 0, 0);
+}
+.sesiones{
+    background-color: rgba(255, 255, 255, 0.726);
+    border-radius: 50px;
+    color: white;
+}
+.colorq{
+    color: white;
+}
+#fondo{
+    background-color: rgb(62, 65, 68);
+}
+.desplegable button{
+    border-radius: 50px;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    background-color: rgb(62, 65, 68);
+    color: rgb(255, 255, 255);
+    border: none;
+    margin-top: 3px;
+}
+.nav-item a:hover{
+    background-color: white;
+}
+.desplegable button:hover{
+    background: rgba(255, 255, 255, 0.938);
+    color: black;
+}
+.menua{
+    background-color: rgba(0, 0, 0, 0.801);
+}
+.color{
+    color: white;
+}
+.imgSlider{
+    height: 600px;
+    object-fit: fill;
+    
+}
+.imgPag{
+    background-color: black;
+    display: flex;
+}
+.imgPag:hover{
+    -webkit-transform:scale(0.999);
+    transform:scale(0.999);
+}
+
+.posicionq{
+    width: 40px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    
+}
+a{
+    text-decoration: none;
+}
+.padin{
+    padding: 0;
+}
+
+.blanco{
+    color: white;
+    margin: 8px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-right: 200px;
+    
+}
+.blancoo{
+    color: white;
+    margin: 8px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-right: 150px;
+    
+}
+.blancooo{
+    color: white;
+    margin: 8px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-right: 190px;
+    
+}
+
+.sesionesbajos{
+    background-color: rgba(75, 71, 71, 0.849);
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.boton{
+    color: black;
+}
+.botones{
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.801);
+    color: black;
+}
+
+/*h*/
+
+.bajologo{
+    margin: 0;
+    width: 80px;
+    font-size: 30px;
+}
+
+.desplegablebajo button{
+    border-radius: none;
+    display: block;
+    transition: all 0.4s linear;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(62, 65, 68); 
+}
+.desplegablebajo button:hover{
+    transition: none;
+    background-color: white;
+    color: black;
+}
+.colorbajo{
+    color: white;
+}
+.colorbajo:hover{
+    background-color: white;
+}
+.offcanvas-body{
+    height: 30px;
+}
+.cuadro{
+    background-color: rgb(62, 65, 68);
+    
+}
+
+.X{
+   background-color: white;
+}
+@media (max-width:841px){
+    .bajo{
+        display: block;
+        
+    }
+    #fondo{
+        display: none;
+    }
+}
+.iconos {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.border-icon {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: solid thin white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all .3s ease-in;
+}
+
+
+/*h*/
+
+
+main{
+    background-color: rgba(255, 255, 255, 0.726);
+    color: rgb(0, 0, 0);
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 520;
+}
+.row p{
+    padding-top: 9px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 520;
+}
+.hola{
+    width: 80%;
+}
+
+
+/*h*/
+
+
+#footer{
+    background-color: rgb(62, 65, 68);
+}
+.footer2{
+    background-color: black;
+}
+
+
+
