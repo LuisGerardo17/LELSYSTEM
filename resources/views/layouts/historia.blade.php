@@ -108,7 +108,7 @@
 	<main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="welcome.html">Principal</a></li>
+				<li class="breadcrumb-item"><a href="">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Historia</li>
 			</ol>
 		</nav>
