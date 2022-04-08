@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/', function () {
+    return view('layouts.homepage');
+});
 Route::get('/', function () {
     return view('layouts.historia');
 });
