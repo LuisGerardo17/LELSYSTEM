@@ -18,13 +18,13 @@ Route::get('/', function () {
 });
 
 
-Route::get( '/historia', function () {
-    return view('layouts.historia');
+Route::get( '/views/layouts', function () {
+    return view('historia');
 });
 
 
-Route::get( '/vision', function () {
-    return view('layouts.vision');
+Route::get( '/views/layouts', function () {
+    return view('vision');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
