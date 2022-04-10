@@ -1,7 +1,14 @@
 <?php
 
-use App\Http\Controllers\historia;
+
 use Illuminate\Support\Facades\Route;
+//agragamos los controladores
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\CursosController;
+use App\Http\Controllers\ActividadesController;
+use App\Http\Controllers\RecursosController;
+use App\Http\Controllers\RolesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,19 +25,6 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-Route::get('/', function () {
-    return view('layouts.homepage');
-});
-Route::get('/', function () {
-    return view('historia');
-});
-
-
-Route::get('/', function () {
-    return view('layouts.vision');
-});
-
-
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -38,3 +32,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware'=>['auth']],function(){
+Route::resource('roles',RolesController::class);
+Route::resource('usuarios',UsuariosController::class);
+Route::resource('cursos', CursosController::class);
+Route::resource('actividades', ActividadesController::class);
+Route::resource('recursos', RecursosController::class);
+
+
+});
