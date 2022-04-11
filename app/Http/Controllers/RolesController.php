@@ -3,9 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+use Illuminate\Support\Facades\DB;
+
 
 class RolesController extends Controller
 {
+   
+     function __construct()
+     {
+
+         $this-> middleware('permission:ver-rol | crear-rol | editar-rol | borrar-rol', ['only'=>['index']]);
+         $this-> middleware('permission:crear-rol', ['only'=>['create','store']]);
+         $this-> middleware('permission:editar-rol', ['only'=>['edit','update']]);
+         $this-> middleware('permission:borrar-rol', ['only'=>['destroy']]);
+     }
+   
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +27,8 @@ class RolesController extends Controller
      */
     public function index()
     {
-        //
+        $roles = Role::paginate(5);
+        return view('roles.index', compact('roles'));
     }
 
     /**
