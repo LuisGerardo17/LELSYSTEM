@@ -6,7 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Arr;
 
 class UsuariosController extends Controller
 {
@@ -17,7 +18,8 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        //
+      $usuarios= User::paginate(5);
+      return view('usuarios.index', compact('usuarios'));
     }
 
     /**
@@ -27,7 +29,8 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Role::pluck('name', 'name')->all();
+        return view('usuarios.crear', compact('roles'));
     }
 
     /**
@@ -38,13 +41,24 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $this->validate($request, [
+          'name' => 'required',
+          'email' => 'required|email|unique:users,email',
+          'passsword'=>'required|same:confirm-password',
+          'roles' => 'required'
+         ]);
+         $input = $request->all();
+         $input['password'] = Hash::make($input['password']);
+
+         $user = User::create($input);
+         $user->assignRole($request->$input('roles'));
+            return redirect()->route('usuarios.index');
+        }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $usuarios
+     * @param  \App\Models\User  $User
      * @return \Illuminate\Http\Response
      */
     public function show(User $User)
@@ -55,12 +69,14 @@ class UsuariosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $usuarios
+     * @param  \App\Models\User  $User
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $User)
+    public function edit($id)
     {
-        //
+        $user = User::find($id);
+        $roles = Role::pluck('name','name')->all();
+        return view('usuarios.editar', compact('user','roles','userRole'));
     }
 
     /**
@@ -70,9 +86,24 @@ class UsuariosController extends Controller
      * @param  \App\Models\User  $User
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,User $User)
+    public function update(Request $request,$id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email'.$id,
+            'passsword'=>'same:confirm-password',
+            'roles' => 'required'
+           ]);
+
+           $input = $request->all();
+           if(!empty($input['password'])){
+            $input['password'] = Hash::make($input['password']);
+             
+
+           } else{
+            $input = Arr::except($input,array('password'));
+
+           }
     }
 
     /**
