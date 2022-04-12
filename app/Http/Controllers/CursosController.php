@@ -27,6 +27,7 @@ class CursosController extends Controller
     public function index()
     {
         $cursos = Cursos::paginate(5);
+        return view('cursos.index', compact('cursos'));
     }
 
     /**
