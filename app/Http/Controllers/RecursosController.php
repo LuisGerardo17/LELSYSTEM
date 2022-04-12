@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class RecursosController extends Controller
 {
+    function __construct()
+    {
+
+        $this-> middleware('permission:ver-recurso | crear-recurso | editar-recurso | borrar-recurso', ['only'=>['index']]);
+        $this-> middleware('permission:crear-recurso', ['only'=>['create','store']]);
+        $this-> middleware('permission:editar-recurso', ['only'=>['edit','update']]);
+        $this-> middleware('permission:borrar-recurso', ['only'=>['destroy']]);
+    }
+   
+   
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +24,8 @@ class RecursosController extends Controller
      */
     public function index()
     {
-        //
+        $recursos = Recursos::paginate(5);
+        return view('recursos.index', compact('recursos'));
     }
 
     /**
@@ -24,7 +35,7 @@ class RecursosController extends Controller
      */
     public function create()
     {
-        //
+        return view('recursos.crear');
     }
 
     /**
@@ -35,7 +46,14 @@ class RecursosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          
+        request()->validate([
+            'codigo_recurso' => 'required|codigo_recurso|unique:recursos,codigo_recurso',
+            'nombre_recurso' => 'required',
+            'descripcion'=> 'required',
+        ]);
+        Recursos::create($request->all());
+        return redirect()->route('recursos.index');
     }
 
     /**
@@ -57,7 +75,7 @@ class RecursosController extends Controller
      */
     public function edit(recursos $recursos)
     {
-        //
+        return view('recursos.editar', compact('recursos'));
     }
 
     /**
@@ -69,7 +87,13 @@ class RecursosController extends Controller
      */
     public function update(Request $request, recursos $recursos)
     {
-        //
+         request()->validate([
+            'codigo_recurso' => 'required|codigo_recurso|unique:recursos,codigo_recurso',
+            'nombre_recurso' => 'required',
+            'descripcion'=> 'required',
+        ]);
+        $recursos->update($request->all());
+        return redirect()->route('recursos.index');
     }
 
     /**
@@ -80,6 +104,7 @@ class RecursosController extends Controller
      */
     public function destroy(recursos $recursos)
     {
-        //
+        $recursos->delete();
+        return redirect()->route('recursos.index');
     }
 }
