@@ -22,7 +22,7 @@ use App\Http\Controllers\RolesController;
 */
 
 Route::get('/', function () {
-    return view('auth.register');
+    return view('homepage');
 });
 
 
