@@ -37,7 +37,7 @@ class CursosController extends Controller
      */
     public function create()
     {
-        //
+        return view('cursos.crear');   
     }
 
     /**
@@ -48,7 +48,13 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'codigo_curso' => 'required|codigo_curso|unique:cursos,codigo_curso',
+            'nombre_curso' => 'required',
+            'descripcion'=> 'required',
+        ]);
+        Cursos::create($request->all());
+        return redirect()->route('cursos.index');
     }
 
     /**
@@ -57,7 +63,7 @@ class CursosController extends Controller
      * @param  \App\Models\cursos  $cursos
      * @return \Illuminate\Http\Response
      */
-    public function show(cursos $cursos)
+    public function show($id)
     {
         //
     }
@@ -68,9 +74,9 @@ class CursosController extends Controller
      * @param  \App\Models\cursos  $cursos
      * @return \Illuminate\Http\Response
      */
-    public function edit(cursos $cursos)
+    public function edit(Cursos $cursos)
     {
-        //
+        return view('cursos.editar', compact('cursos'));
     }
 
     /**
@@ -80,9 +86,16 @@ class CursosController extends Controller
      * @param  \App\Models\cursos  $cursos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cursos $cursos)
+    public function update(Request $request, Cursos $cursos)
     {
-        //
+        request()->validate([
+            'codigo_curso' => 'required|codigo_curso|unique:cursos,codigo_curso',
+            'nombre_curso' => 'required',
+            'descripcion'=> 'required',
+        ]);
+        $cursos->update($request->all());
+        return redirect()->route('cursos.index');
+              
     }
 
     /**
@@ -93,6 +106,8 @@ class CursosController extends Controller
      */
     public function destroy(cursos $cursos)
     {
-        //
+        $cursos->delete();
+        return redirect()->route('cursos.index');
+                
     }
 }
