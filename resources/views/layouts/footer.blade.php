@@ -1,3 +1,3 @@
 <div class="footer-left">
-    All rights reserved &copy; {{ date('Y') }}
+    LELSYSTEM  &copy; {{ date('Y') }}
 </div>

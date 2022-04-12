@@ -12,6 +12,14 @@
                         <div class="card-body">
                             <h3 class="text-center">Usuarios</h3>
                             <a class="btn btn-warning" href="{{route('usuarios.create')}}">Nuevo</a>
+                            
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         </div>
                     </div>
                 </div>

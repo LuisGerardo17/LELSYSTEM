@@ -12,14 +12,14 @@
     </a>
   
     <a class="nav-link" href="/cursos">
-        <i class=" fas fa-books"></i><span>Cursos</span>
+        <i class="fas fa-book"></i><span>Cursos</span>
     </a>
   
     <a class="nav-link" href="/actividades">
-        <i class="fa-solid fa-pen"></i><span>Actividades</span>
+        <i class="fas fa-pen"></i><span>Actividades</span>
     </a>
   
     <a class="nav-link" href="/recursos">
-        <i class="fa-light fa-cubes"></i><span>Recursos</span>
+        <i class="fas fa-cubes"></i><span>Recursos</span>
     </a>
 </li>
