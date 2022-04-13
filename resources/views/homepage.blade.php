@@ -28,20 +28,20 @@
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 								<li><a class="dropdown-item color"
 										href="{{route('historia')}}">Historia</a></li>
-								<li><a class="dropdown-item color" href="layouts/vision.html">vision</a>
+								<li><a class="dropdown-item color" href="{{route('vision')}}">vision</a>
 								</li>
 
 							</ul>
 						</div>
 					</li>
 					<li class="nav-item">
-						<a href="Oferta academica/oferta academica.html" class="nav-link marign">Oferta academica</a>
+						<a href="{{route('oferta')}}" class="nav-link marign">Oferta academica</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link marign" href="contactanos/contactanos.html">Contactanos</a>
+						<a class="nav-link marign" href="{{route('contactos')}}">Contactanos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link marign" href="Admisiones/admisiones.html">Admisiones</a>
+						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
 						<a class="nav-link marign colorq" href="{{route('login')}}">Iniciar Sesion</a>
