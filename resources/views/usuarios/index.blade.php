@@ -12,7 +12,32 @@
                         <div class="card-body">
                             <h3 class="text-center">Usuarios</h3>
                             <a class="btn btn-warning" href="{{route('usuarios.create')}}">Nuevo</a>
-                            
+                            <table class="table table-striped mt-2">
+
+                                <thead style = "background-color: #6777ef;">
+                                  <th style = "display:none;">ID</th>
+                                  <th style="color: #ffff;">Nombre</th>
+                                  <th style="color: #ffff;">E-mail</th>
+                                  <th style="color: #ffff;">Rol</th>
+                                  <th style="color: #ffff;">Acciones</th>
+                                </thead>
+                               <tbody>
+                                foreach($usuarios as $usuario)
+                                 <tr>
+                                       <td style = "style = display: none;">{{$usuario->id}} </td>
+                                       <td> {{$usuario->name}}</td>
+                                       <td> {{$usuario->email}}</td>
+                                       
+
+                                 </tr>
+
+                               </tbody>
+
+
+                            </table>
+
+
+
                         
                         
                         
