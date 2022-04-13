@@ -27,7 +27,7 @@
 							</button>
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 								<li><a class="dropdown-item color"
-										href="layouts/historia">Historia</a></li>
+										href="{{route('historia')}}">Historia</a></li>
 								<li><a class="dropdown-item color" href="layouts/vision.html">vision</a>
 								</li>
 
@@ -44,7 +44,7 @@
 						<a class="nav-link marign" href="Admisiones/admisiones.html">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="login.html">Iniciar Sesion</a>
+						<a class="nav-link marign colorq" href="{{route('login')}}">Iniciar Sesion</a>
 					</li>
 				</ul>
 			</nav>

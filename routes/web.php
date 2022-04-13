@@ -22,7 +22,7 @@ use App\Http\Controllers\RolesController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('homepage');
 });
 
 
@@ -32,6 +32,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/historia', [App\Http\Controllers\Historia::class, 'index'])->name('historia');
+
 
 Route::group(['middleware'=>['auth']],function(){
 Route::resource('roles',RolesController::class);
