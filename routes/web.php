@@ -22,7 +22,7 @@ use App\Http\Controllers\RolesController;
 */
 
 Route::get('/', function () {
-    return view('homepage');
+    return view('home');
 });
 
 
