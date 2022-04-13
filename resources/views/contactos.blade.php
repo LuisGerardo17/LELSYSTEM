@@ -16,7 +16,7 @@
 	<header>
 		<div id="fondo">
 			<a href="../index.html">
-				<img src="../img/logo.jpeg" class="logo" width="150px" alt="">
+				<img src="static/img/logo.jpeg" class="logo" width="150px" alt="">
 			</a>
 			<nav class="menu">
 				<ul class="nav lista">
@@ -28,8 +28,8 @@
 							</button>
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 								<li><a class="dropdown-item color"
-										href="../quienes somos/historia/historia.html">Historia</a></li>
-								<li><a class="dropdown-item color" href="../quienes somos/Vision/vision.html">vision</a>
+										href="{{route('historia')}}">Historia</a></li>
+								<li><a class="dropdown-item color" href="{{route('vision')}}">vision</a>
 								</li>
 
 							</ul>
@@ -79,8 +79,8 @@
 											Quienes somos
 										</button>
 										<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
-											<li><a class="dropdown-item colorbajo" href="../quienes somos/historia/historia.html">Historia</a></li>
-											<li><a class="dropdown-item colorbajo" href="../quienes somos/Vision/vision.html">vision</a></li>
+											<li><a class="dropdown-item colorbajo" href="{{route('historia')}}">Historia</a></li>
+											<li><a class="dropdown-item colorbajo" href="{{route('vision')}}">vision</a></li>
 
 										</ul>
 									</div>
@@ -188,7 +188,7 @@
 					<div class="widget-body">
 						<center>
 							<p class="text-right">
-								Copyright &copy; 2022. Designed by @LEL.SYSTEM
+								Copyright &copy; 2022. Designed by @LELSYSTEM
 							</p>
 						</center>
 					</div>

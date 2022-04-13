@@ -16,7 +16,7 @@
 	<header>
 		<div id="fondo">
 			<a href="../../index.html">
-				<img src="../../img/logo.jpeg" class="logo" width="150px" alt="">
+				<img src="static/img/logo.jpeg" class="logo" width="150px" alt="">
 			</a>
 			<nav class="menu">
 				<ul class="nav lista">
@@ -27,23 +27,23 @@
 								Quienes somos
 							</button>
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
-								<li><a class="dropdown-item color" href="../historia/historia.html">Historia</a></li>
+								<li><a class="dropdown-item color" href="{{route('historia')}}">Historia</a></li>
 								<li><a class="dropdown-item color" href="#">vision</a></li>
 
 							</ul>
 						</div>
 					</li>
 					<li class="nav-item">
-						<a href="../../Oferta academica/oferta academica.html" class="nav-link marign">Oferta academica</a>
+						<a href="{{route('oferta')}}" class="nav-link marign">Oferta academica</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link marign" href="../../contactanos/contactanos.html">Contactos</a>
+						<a class="nav-link marign" href="{{route('contactos')}}">Contactos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link marign" href="../../Admisiones/admisiones.html">Admisiones</a>
+						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="../../login.html">Iniciar Sesion</a>
+						<a class="nav-link marign colorq" href="{{route('login')}}">Iniciar Sesion</a>
 					</li>
 				</ul>
 			</nav>
@@ -75,24 +75,24 @@
 											Quienes somos
 										</button>
 										<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
-											<li><a class="dropdown-item colorbajo" href="../historia/historia.html">Historia</a></li>
+											<li><a class="dropdown-item colorbajo" href="{{route('historia')}}">Historia</a></li>
 											<li><a class="dropdown-item colorbajo" href="#">vision</a></li>
 
 										</ul>
 									</div>
 								</li>
 								<li class="nav-item">
-									<a href="../../Admisiones/admisiones.html" class="blancoo">Oferta academica</a>
+									<a href="{{route('oferta')}}" class="blancoo">Oferta academica</a>
 								</li>
 								<li class="nav-item">
-									<a class="blanco" href="../../contactanos/contactanos.html">Contactos</a>
+									<a class="blanco" href="{{route('contactos')}}">Contactos</a>
 								</li>
 								<li class="nav-item">
-									<a class="blancooo" href="../../Admisiones/admisiones.html">Admisiones</a>
+									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
 								
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="../../login.html">Iniciar Sesion</a></center>
+									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Iniciar Sesion</a></center>
 								</li>
 							</ul>
 
@@ -107,7 +107,7 @@
 	<main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="../../index.html">Principal</a></li>
+				<li class="breadcrumb-item"><a href="/">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Vision</li>
 			</ol>
 		</nav>
@@ -166,7 +166,7 @@
 				<div class="row">
 						<div class="widget-body">
 							<center><p class="text-right">
-								Copyright &copy; 2022. Designed by @LEL.SYSTEM
+								Copyright &copy; 2022. Designed by @LELSYSTEM
 							</p></center>
 						</div>
 				</div>

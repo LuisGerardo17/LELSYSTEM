@@ -9,16 +9,16 @@
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../css/component.css" />
-    <link rel="stylesheet" href="{{ asset('static/css/estilos4.css') }}"/>
-	<title>LELSISTEM</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('static/css/component.css')}}" />
+    <link rel="stylesheet" href="{{ asset('static/css/estilosfer.css')}}"/>
+	<title>LELSYSTEM</title>
 </head>
 
 <body>
 	<header>
 		<div id="fondo">
 			<a href="../index.html">
-				<img src="../img/logo.jpeg" class="logo" width="150px" alt="">
+				<img src="static/img/logo.jpeg" class="logo" width="150px" alt="">
 			</a>
 			<nav class="menu">
 				<ul class="nav lista">
@@ -29,8 +29,8 @@
 								Quienes somos
 							</button>
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
-								<li><a class="dropdown-item color" href="../quienes somos/historia/historia.html">Historia</a></li>
-								<li><a class="dropdown-item color" href="../quienes somos/Vision/vision.html">vision</a></li>
+								<li><a class="dropdown-item color" href="{{route('historia')}}">Historia</a></li>
+								<li><a class="dropdown-item color" href="{{route('vision')}}">Vision</a></li>
 
 							</ul>
 						</div>
@@ -39,13 +39,13 @@
 						<a href="#" class="nav-link marign">Oferta academica</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link marign" href="../contactanos/contactanos.html">Contactos</a>
+						<a class="nav-link marign" href="{{route('contactos')}}">Contactos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link marign" href="../Admisiones/admisiones.html">Admisiones</a>
+						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="../login.html">Iniciar Sesion</a>
+						<a class="nav-link marign colorq" href="{{route('login')}}">Iniciar Sesion</a>
 					</li>
 				</ul>
 			</nav>
@@ -56,7 +56,7 @@
 			<nav class="navbar navbar-light bg-light ">
 				<div class="container-fluid fondobajo">
 					<img src="../img/logo.jpeg"  width="150px" alt="">
-					<!--<p class="bajologo">@LEL.SYSTEM</p>-->
+					<!--<p class="bajologo">@LELSYSTEM</p>-->
 					<button class="navbar-toggler boton" type="button" data-bs-toggle="offcanvas"
 						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 						<img src="../img/menu.png" class="posicionq" alt="">
@@ -77,8 +77,8 @@
 											Quienes somos
 										</button>
 										<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
-											<li><a class="dropdown-item colorbajo" href="../quienes somos/historia/historia.html">Historia</a></li>
-											<li><a class="dropdown-item colorbajo" href="../quienes somos/Vision/vision.html">Vision</a></li>
+											<li><a class="dropdown-item colorbajo" href="{{route('historia')}}">Historia</a></li>
+											<li><a class="dropdown-item colorbajo" href="{{route('vision')}}">Vision</a></li>
 
 										</ul>
 									</div>
@@ -87,13 +87,13 @@
 									<a href="#" class="blancoo">Oferta academica</a>
 								</li>
 								<li class="nav-item">
-									<a class="blanco" href="../contactanos/contactanos.html">Contactos</a>
+									<a class="blanco" href="{{route('contactos')}}">Contactos</a>
 								</li>
 								<li class="nav-item">
-									<a class="blancooo" href="../Admisiones/admisiones.html">Admisiones</a>
+									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="#">Iniciar Sesion</a></center>
+									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Iniciar Sesion</a></center>
 								</li>
 							</ul>
 
@@ -107,7 +107,7 @@
 	<main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="../index.html">Principal</a></li>
+				<li class="breadcrumb-item"><a href="/">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Oferta academica</li>
 			</ol>
 		</nav>
@@ -116,7 +116,7 @@
             <div class="pricing pricing--sonam">
                 <div class="pricing__item">
                     <h3 class="pricing__title">Desarrollo de Software</h3>
-                    <div class="pricing__price"><span class="pricing__currency"><img src="../img/software.jpg" width="300px" height="200px"></div>
+                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/software.jpg" width="300px" height="200px"></div>
                     <p class="pricing__sentence">Postulate</p>
                     <ul class="pricing__feature-list">
                         <li class="pricing__feature">Desarrolla paginas web.</li>
@@ -127,7 +127,7 @@
                 </div>
                 <div class="pricing__item">
                     <h3 class="pricing__title">Control de Incendios</h3>
-                    <div class="pricing__price"><span class="pricing__currency"><img src="../img/extintor.jpg" width="300px" height="200px"></div>
+                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/extintor.jpg" width="300px" height="200px"></div>
                     <p class="pricing__sentence">Postulate</p>
                     <ul class="pricing__feature-list">
                         <li class="pricing__feature">Operaciones de rescate.</li>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="pricing__item">
                     <h3 class="pricing__title">&nbsp;Diseño &nbsp; de &nbsp; Modas&nbsp;</h3>
-                    <div class="pricing__price"><span class="pricing__currency"><img src="../img/modas.png" width="300px" height="200px"></div>
+                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/modas.png" width="300px" height="200px"></div>
                     <p class="pricing__sentence">Postulate</p>
                     <ul class="pricing__feature-list">
                         <li class="pricing__feature">Diseño creativo.</li>
@@ -191,7 +191,7 @@
 				<div class="row">
 						<div class="widget-body">
 							<center><p class="text-right">
-								Copyright &copy; 2022. Designed by @LEL.SYSTEM
+								Copyright &copy; 2022. Designed by @LELSYSTEM
 							</p></center>
 						</div>
 				</div>
