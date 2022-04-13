@@ -54,7 +54,7 @@
 			<nav class="navbar navbar-light bg-light">
 				<div class="container-fluid fondobajo">
 					<img src="../../img/logo.jpeg" width="150px" alt="">
-					<!--<p class="bajologo">@LEL.SYSTEM</p>-->
+					<!--<p class="bajologo">@LELSYSTEM</p>-->
 					<button class="navbar-toggler boton" type="button" data-bs-toggle="offcanvas"
 						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 						<img src="../../img/menu.png" class="posicionq" alt="">
@@ -102,13 +102,10 @@
 		</div>
 	</header>
 
-
-
-
-	<main>
+     <main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="layouts/homepage">Principal</a></li>
+				<li class="breadcrumb-item"><a href="/">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Historia</li>
 			</ol>
 		</nav>
