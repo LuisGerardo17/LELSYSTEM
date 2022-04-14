@@ -24,6 +24,6 @@ class vision extends Controller
      */
     public function index()
     {
-        return view('vision');
+        return view('homepage.vision');
     }
 }

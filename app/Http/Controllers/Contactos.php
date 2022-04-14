@@ -23,6 +23,6 @@ class Contactos extends Controller
      */
     public function index()
     {
-        return view('contactos');
+        return view('homepage.contactos');
     } 
 }

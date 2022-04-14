@@ -23,6 +23,6 @@ class Oferta extends Controller
      */
     public function index()
     {
-        return view('oferta');
+        return view('homepage.oferta');
     } 
 }

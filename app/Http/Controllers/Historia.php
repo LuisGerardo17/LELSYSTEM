@@ -24,6 +24,6 @@ class Historia extends Controller
      */
     public function index()
     {
-        return view('historia');
+        return view('homepage.historia');
     }
 }

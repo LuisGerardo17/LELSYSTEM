@@ -23,6 +23,6 @@ class Admisiones extends Controller
      */
     public function index()
     {
-        return view('admisiones');
+        return view('homepage.admisiones');
     } 
 }
