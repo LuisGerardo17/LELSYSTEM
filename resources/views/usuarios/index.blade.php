@@ -22,14 +22,27 @@
                                   <th style="color: #ffff;">Acciones</th>
                                 </thead>
                                <tbody>
-                                foreach($usuarios as $usuario)
-                                 <tr>
-                                       <td style = "style = display: none;">{{$usuario->id}} </td>
-                                       <td> {{$usuario->name}}</td>
-                                       <td> {{$usuario->email}}</td>
-                                       
+                                   @foreach($usuarios as $usuario)
+                                     <tr>
+                                        <td style ="display: none;">{{$usuario->id}} </td>
+                                        <td> {{$usuario->name}}</td>
+                                        <td> {{$usuario->email}}</td>
+                                      @if(!empty($usuario-> getRolNames()))
+                                            @foreach ($usuario->getRolNames() as $rolName)
+                                                 <h5><span class= "badge badge-dark"> {{ $rolName }} </span>   </h5>
+                                                
+                                            @endforeach
 
-                                 </tr>
+                                      @endif
+                                    
+                                    
+                                    </tr>
+                                      
+
+
+
+
+                                   @endforeach
 
                                </tbody>
 
