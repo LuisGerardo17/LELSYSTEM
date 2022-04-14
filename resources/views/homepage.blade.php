@@ -54,8 +54,8 @@
 		<div class="bajo">
 			<nav class="navbar navbar-light bg-light">
 				<div class="container-fluid fondobajo">
-					<img src="img/logo.jpeg" width="150px" alt="">
-					<!--<p class="bajologo">@LEL.SYSTEM</p>-->
+					<img src="static/img/logo.jpeg" width="150px" alt="">
+					<!--<p class="bajologo">@LELSYSTEM</p>-->
 					<button class="navbar-toggler boton" type="button" data-bs-toggle="offcanvas"
 						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 						<img src="img/menu.png" class="posicionq" alt="">
@@ -77,25 +77,25 @@
 										</button>
 										<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 											<li><a class="dropdown-item colorbajo"
-													href="quienes somos/historia/historia.html">Historia</a></li>
+													href="{{route('historia')}}">Historia</a></li>
 											<li><a class="dropdown-item colorbajo"
-													href="quienes somos/Vision/vision.html">Vision</a></li>
+													href="{{route('vision')}}">Vision</a></li>
 
 										</ul>
 									</div>
 								</li>
 								<li class="nav-item">
-									<a href="Oferta academica/oferta academica.html" class="blancoo">Oferta
+									<a href="{{route('oferta')}}" class="blancoo">Oferta
 										academica</a>
 								</li>
 								<li class="nav-item">
-									<a class="blanco" href="contactanos/contactanos.html">Contactanos</a>
+									<a class="blanco" href="{{route('contactos')}}">Contactanos</a>
 								</li>
 								<li class="nav-item">
-									<a class="blancooo" href="Admisiones/admisiones.html">Admisiones</a>
+									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="login.html">Iniciar Sesion</a>
+									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Iniciar Sesion</a>
 									</center>
 								</li>
 							</ul>
@@ -207,7 +207,7 @@
 						<center>
 							<h3 class="widget-title">Contactanos</h3>
 							<div class="widget-body">
-								<p>+593 999999999<br>
+								<p>0987295066<br>
 									<a href="mailto:esy.mera@yavirac.edu.ec"><i
 											class='bx bxl-gmail border-icon'></i></a><br>
 
@@ -239,7 +239,7 @@
 					<div class="widget-body">
 						<center>
 							<p class="text-right">
-								Copyright &copy; 2022. Designed by @LEL.SYSTEM
+								Copyright &copy; 2022. Designed by @LELSYSTEM
 							</p>
 						</center>
 					</div>

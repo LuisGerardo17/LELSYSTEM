@@ -75,7 +75,7 @@
 											Quienes somos
 										</button>
 										<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
-											<li><a class="dropdown-item colorbajo" href="#">Historia</a></li>
+											<li><a class="dropdown-item colorbajo" href="{{route('historia')}}">Historia</a></li>
 											<li><a class="dropdown-item colorbajo" href="{{route('vision')}}">Vision</a></li>
 
 										</ul>
