@@ -42,7 +42,7 @@ Route::get('/homepage.vision', [App\Http\Controllers\vision::class, 'index'])->n
 Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->name('oferta');
 Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index'])->name('contactos');
 Route::get('/homepage.admisiones',   [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
-//Route::get('/auth.login', [App\Http\Controllers\LoginController::class, 'crear'])->name('login');
+Route::get('/auth.login', [App\Http\Controllers\LoginController::class, 'crear'])->name('login');
 
 
 //CREACION DE RUTAS PARA LOS CCRUDS DEL MDULO ADMINISTRADOR
