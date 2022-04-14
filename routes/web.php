@@ -28,22 +28,21 @@ Route::get('/', function () {
 });
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-//Auth::routes();
 
 Auth::routes();
 
-Route::get('/auth.login', [App\Http\Controllers\Auth\LoginController::class, 'index'])->name('login');
+
 //CREACIÓN DE RUTAS PARA EL HOME PAGE
 Route::get('/home.home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/homepage.historia', [App\Http\Controllers\Historia::class, 'index'])->name('historia');
 Route::get('/homepage.vision', [App\Http\Controllers\vision::class, 'index'])->name('vision');
 Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->name('oferta');
 Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index'])->name('contactos');
-Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
-Route::get('/auth.login', [App\Http\Controllers\Auth\LoginController::class, 'index'])->name('login');
+Route::get('/homepage.admisiones',   [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
+//Route::get('/login', [App\Http\Controllers\LoginController::class, 'crear'])->name('login');
 
 
 //CREACION DE RUTAS PARA LOS CCRUDS DEL MDULO ADMINISTRADOR
