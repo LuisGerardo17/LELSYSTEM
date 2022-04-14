@@ -10,6 +10,7 @@ use App\Http\Controllers\CursosController;
 use App\Http\Controllers\ActividadesController;
 use App\Http\Controllers\RecursosController;
 use App\Http\Controllers\RolesController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +28,14 @@ Route::get('/', function () {
 });
 
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+//Auth::routes();
 
 Auth::routes();
+
+Route::get('/auth.login', [App\Http\Controllers\Auth\LoginController::class, 'index'])->name('login');
 //CREACIÓN DE RUTAS PARA EL HOME PAGE
 Route::get('/home.home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/homepage.historia', [App\Http\Controllers\Historia::class, 'index'])->name('historia');
