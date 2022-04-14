@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 //agragamos los controladores
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\ActividadesController;
@@ -27,7 +28,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Auth::routes();
 //CREACIÓN DE RUTAS PARA EL HOME PAGE
