@@ -36,7 +36,7 @@
 						</div>
 					</li>
 					<li class="nav-item">
-						<a href="../Oferta academica/oferta academica.html" class="nav-link marign">Oferta academica</a>
+						<a href="{{route('oferta')}}" class="nav-link marign">Oferta academica</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link marign" href="{{route('contactos')}}">Contactos</a>
@@ -86,16 +86,16 @@
 									</div>
 								</li>
 								<li class="nav-item">
-									<a href="../Oferta academica/oferta academica.html" class="blancoo">Oferta academica</a>
+									<a href="{{route('contactos')}}" class="blancoo">Oferta academica</a>
 								</li>
 								<li class="nav-item">
 									<a class="blanco" href="#">Contactos</a>
 								</li>
 								<li class="nav-item">
-									<a class="blancooo" href="../Admisiones/admisiones.html">Admisiones</a>
+									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="../login.html">Iniciar Sesion</a></center>
+									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Iniciar Sesion</a></center>
 								</li>
 							</ul>
 
