@@ -27,8 +27,8 @@
 								Quienes somos
 							</button>
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
-								<li><a class="dropdown-item color" href="{{route('historia')}}">Historia</a></li>
-								<li><a class="dropdown-item color" href="{{route('vision')}}">Vision</a></li>
+								<li><a class="dropdown-item color" href="{{route('homepage.historia')}}">Historia</a></li>
+								<li><a class="dropdown-item color" href="{{route('homepage.vision')}}">Vision</a></li>
 
 							</ul>
 						</div>
@@ -43,7 +43,7 @@
 						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="../login.html">Iniciar Sesion</a>
+						<a class="nav-link marign colorq" href="{{route('login')}}">Iniciar Sesion</a>
 					</li>
 				</ul>
 			</nav>
