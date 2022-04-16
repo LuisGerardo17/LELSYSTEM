@@ -43,4 +43,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected static function throwBadMethodCallException($method)
+
+    {
+
+        throw new BadMethodCallException(sprintf(
+
+            getRolNames::getRolNames(), static::class, $method
+
+        ));
+
+    }
+
 }

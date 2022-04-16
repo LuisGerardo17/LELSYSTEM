@@ -11,6 +11,7 @@ use Illuminate\Support\Arr;
 
 class UsuariosController extends Controller
 {
+
     
     function __construct()
     {
@@ -41,6 +42,7 @@ class UsuariosController extends Controller
     public function create()
     {
         $roles = Role::pluck('name', 'name')->all();
+     
         return view('usuarios.crear', compact('roles'));
     }
 
