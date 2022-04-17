@@ -27,35 +27,25 @@
                                         <td style ="display: none;">{{$usuario->id}} </td>
                                         <td> {{$usuario->name}}</td>
                                         <td> {{$usuario->email}}</td>
-                                     /*
-                                     <td>  
-                                      @if(!empty($usuario-> getRolNames()))
-                                            @foreach ($usuario->getRolNames() as $rolName)
-                                                 <h5><span class= "badge badge-dark"> {{ $rolName }} </span>   </h5>
-                                                
-                                            @endforeach
+                                     
 
-                                      @endif
-
-                                      </td>
-                                    */
-                                    <td>
-
-                                        <a class="btn btn-info " href = "{{route('usuarios.edit', $usuario->id)}}">Editar</a>
-                                    </td>
+                                        <td> </td>
+                                        <td>
+                                           <a class="btn btn-info " href = "{{route('usuarios.edit', $usuario->id)}}">Editar</a>
+                                           {!! Form::open(['method'=> 'DELETE','route'=>['usuarios.destroy',$usuario->id], 'style'=>'display:inline']) !!}
+                                           {!!Form::submit('Borrar',['class'=>'btn btn-danger'])!!}
+                                           {!! Form::close() !!}  
+                                        </td>
                                     </tr>
                                       
+                                 @endforeach
 
+                               </tbod>
+                             </table>
+                            <div class="pagination justify-content-end">
+                            {!!$usuarios->links() !!}
 
-
-
-                                   @endforeach
-
-                               </tbody>
-
-
-                            </table>
-
+                            </div>
 
 
                         
