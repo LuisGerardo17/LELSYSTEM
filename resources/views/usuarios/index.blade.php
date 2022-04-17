@@ -27,7 +27,7 @@
                                         <td style ="display: none;">{{$usuario->id}} </td>
                                         <td> {{$usuario->name}}</td>
                                         <td> {{$usuario->email}}</td>
-                                     /**!-- 
+                                     /*
                                      <td>  
                                       @if(!empty($usuario-> getRolNames()))
                                             @foreach ($usuario->getRolNames() as $rolName)
@@ -38,7 +38,7 @@
                                       @endif
 
                                       </td>
-                                    **/
+                                    */
                                     <td>
 
                                         <a class="btn btn-info " href = "{{route('usuarios.edit', $usuario->id)}}">Editar</a>

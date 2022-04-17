@@ -43,7 +43,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
+/*
     protected static function throwBadMethodCallException($method)
 
     {
@@ -55,5 +55,5 @@ class User extends Authenticatable
         ));
 
     }
-
+ */
 }
