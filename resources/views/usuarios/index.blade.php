@@ -41,7 +41,7 @@
                                     **/
                                     <td>
 
-                                        <a class="btn btn-info " href = "{{route('usuarios.edit' $usuario->id)}}">Editar</a>
+                                        <a class="btn btn-info " href = "{{route('usuarios.edit', $usuario->id)}}">Editar</a>
                                     </td>
                                     </tr>
                                       
