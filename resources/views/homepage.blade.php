@@ -106,8 +106,8 @@
 								</li>
 
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="{{route('register')}}">Registrarse</a>
-									</center>
+									<a class="blanco sesionesbajos" href="{{route('register')}}">Registrarse</a>
+							
 								</li>
 							</ul>
 
