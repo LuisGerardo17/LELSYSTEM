@@ -45,14 +45,8 @@
 					</li>
 					<li class="nav-item sesiones">
 						<a class="nav-link marign colorq" href="{{route('login')}}">Iniciar Sesion</a>
-
-					</li>
-
-                     <li class="nav-item ">
-						<center><a class="blanco sesionesbajos" href="{{route('register')}}">Registrarse</a>
-						</center>
-					</li>
-				</ul>
+                    </li>
+                  </ul>
 			</nav>
 			<br><br><br><br>
 		</div>
@@ -105,10 +99,7 @@
 									</center>
 								</li>
 
-								<li class="nav-item ">
-									<a class="blanco sesionesbajos" href="{{route('register')}}">Registrarse</a>
-							
-								</li>
+								
 							</ul>
 
 						</div>
