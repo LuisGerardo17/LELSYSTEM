@@ -39,19 +39,19 @@
                                <div class="col-xs-12 col-sm-12 col-md-12">
                                  <div class="form-group">
                                   <label for="nombre">Nombre</label>
-                                  <input type="text" name="nombre" class="form-control"> 
+                                  <input type="text" name="nombre" class="form-control" value="{{$curso->nombre}}"> 
                                  </div> 
                               
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-12">
-                                   <div class="form-group">
+                                   <div class="form-floating">
                                        <label for="descripcion">Descripción</label>
                                        <textarea class="form-control" name="descripcion" style="height:100px">{{$curso->descripcion}}</textarea>
                                     </div>
                                 </div>
                                
-                             </div>  
+                                 
                                <button type="submit" class="btn btn-primary">Guardar</button>
                            </div>
                          </form>

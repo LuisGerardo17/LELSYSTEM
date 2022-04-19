@@ -49,9 +49,9 @@ class CursosController extends Controller
     public function store(Request $request)
     {
        request()->validate([
-            'codigo' => 'required|string|codigo|unique:cursos,codigo',
-            'nombre' => 'required|string',
-            'descripcion'=> 'required|string'
+            'codigo' => 'required|codigo|unique:cursos,codigo',
+            'nombre' => 'required',
+            'descripcion'=> 'required'
         ]);
         cursos::create($request->all());
         return redirect()->route('cursos.index');
@@ -91,9 +91,9 @@ class CursosController extends Controller
     public function update(Request $request, cursos $cursos)
     {
         request()->validate([
-            'codigo' => 'required|string|codigo|unique:cursos,codigo',
-            'nombre' => 'required|string|',
-            'descripcion'=> 'required|string|',
+            'codigo' => 'required|codigo|unique:cursos,codigo',
+            'nombre' => 'required',
+            'descripcion'=> 'required',
         ]);
         $cursos->update($request->all());
         return redirect()->route('cursos.index');
