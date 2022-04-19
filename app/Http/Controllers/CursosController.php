@@ -26,7 +26,7 @@ class CursosController extends Controller
      */
     public function index()
     {
-        $cursos = Cursos::paginate(5);
+        $cursos = cursos::paginate(5);
         return view('cursos.index', compact('cursos'));
     }
 
@@ -48,12 +48,12 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'codigo_curso' => 'required|codigo_curso|unique:cursos,codigo_curso',
-            'nombre_curso' => 'required',
-            'descripcion'=> 'required',
+       request()->validate([
+            'codigo' => 'required|string|codigo|unique:cursos,codigo',
+            'nombre' => 'required|string',
+            'descripcion'=> 'required|string'
         ]);
-        Cursos::create($request->all());
+        cursos::create($request->all());
         return redirect()->route('cursos.index');
     }
 
@@ -61,6 +61,7 @@ class CursosController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\cursos  $cursos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -74,7 +75,7 @@ class CursosController extends Controller
      * @param  \App\Models\cursos  $cursos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cursos $cursos)
+    public function edit(cursos $cursos)
     {
         return view('cursos.editar', compact('cursos'));
     }
@@ -83,15 +84,16 @@ class CursosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @param  \App\Models\cursos  $cursos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cursos $cursos)
+    public function update(Request $request, cursos $cursos)
     {
         request()->validate([
-            'codigo_curso' => 'required|codigo_curso|unique:cursos,codigo_curso',
-            'nombre_curso' => 'required',
-            'descripcion'=> 'required',
+            'codigo' => 'required|string|codigo|unique:cursos,codigo',
+            'nombre' => 'required|string|',
+            'descripcion'=> 'required|string|',
         ]);
         $cursos->update($request->all());
         return redirect()->route('cursos.index');
@@ -102,6 +104,7 @@ class CursosController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\cursos  $cursos
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(cursos $cursos)

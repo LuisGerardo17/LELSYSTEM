@@ -23,32 +23,32 @@
                              </button>
                             </div>
                            @endif
-                     <form action="{{route('cursos.store')}}"  method='POST'>
-                            @csrf
-                          <div class="row">
-                               <div class="col-xs-12 col-sm-12 col-md-12">
-                                   <div class="form-group">
-                                     <label for="codigo">Código</label>
-                                     <input type="text" name="codigo" class="form-control"> 
-                                    </div> 
-                               </div>
-                              
-                               <div class="col-xs-12 col-sm-12 col-md-12">
-                                  <div class="form-group">
-                                     <label for="nombre">Nombre</label>
-                                     <input type="text" name="nombre" class="form-control"> 
-                                  </div> 
-                                </div>
-                              <div class="col-xs-12 col-sm-12 col-md-12">
-                                  <div class="form-control">
-                                     <textarea class="form-control" name="descripcion" style="height:100px"> </textarea>
-                                     <label for="descripcion">Descripción</label>
+                           {!!Form::open(array('route'=>'cursos.store','method'=>'POST')) !!}
+                           <div class="row">
+                                  <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <label for="codigo">Codigo </label>
+                                        {!!Form::text('codigo', array('class'=>'form-control')) !!}
+                                     </div> 
                                   </div>
-                             </div>
-                          </div>  
-                           <br>
-                            <button type="submit" class="btn btn-primary">Guardar</button>
-                    </form>
+                                 
+                                  <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <label for="nombre">Nombre </label>
+                                        {!!Form::text('nombre', array('class'=>'form-control')) !!}
+                                     </div> 
+                                  </div>
+
+                                  <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <label for="descripcion">Descripcion </label>
+                                        {!!Form::text('descripcion', array('class'=>'form-control')) !!}
+                                     </div> 
+                                  </div>
+                                 
+                                </div>  
+                               <button type="submit" class="btn btn-primary">Guardar</button>
+                             {!!Form::close() !!} 
 
                         </div>
                     </div>

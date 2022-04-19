@@ -12,9 +12,9 @@
                         <div class="card-body">
                             <h3 class="text-center">Cursos</h3>
                             @can('crear.curso')
-                                
-                            @endcan
                             <a class="btn btn-warning" href="{{route('cursos.create')}}">Nuevo</a>
+                            @endcan
+                          
                          <table class="table table-striped mt-2">
 
                                 <thead style = "background-color: #6777ef;">
@@ -27,12 +27,12 @@
                             <tbody>
                                @foreach($cursos as $curso)
                                      <tr>
-                                        <td style ="display: none;">{{$curso->id}} </td>
-                                        <td> {{$curso->codigo_curso}}</td>
-                                        <td> {{$curso->nombre_curso}}</td>
+                                        <td style ="display: none;">{{$curso->id}}</td>
+                                        <td> {{$curso->codigo}}</td>
+                                        <td> {{$curso->nombre}}</td>
                                         <td> {{$curso->descripcion}}</td>
                                         
-                                        <td>
+                                    <td>
                                           <form action="{{route('cursos.destroy',$curso->id)}}" method="POST">
                                            @can('editar.curso')
                                             <a class= "btn btn-info" href="#" title="{{route('cursos.edit',$curso->id)}}">Editar</a>   
