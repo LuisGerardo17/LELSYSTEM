@@ -15,12 +15,12 @@ class CreateCursosRecursosTable extends Migration
     {
         Schema::create('cursos-recursos', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo_curso',5);
-            $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos');
-            $table->string('codigo_recurso',5);
-            $table->foreign('codigo_recurso')->references('codigo_recurso')->on('recursos');
+            $table->unsignedInteger('id_curso');
+            $table->foreign('id_curso')->references('id')->on('cursos');
+            $table->unsignedInteger('id_recurso');
+            $table->foreign('id_recurso')->references('id')->on('recursos');
             $table->timestamps();
-        });
+        }); 
     }
 
     /**

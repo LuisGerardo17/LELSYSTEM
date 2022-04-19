@@ -15,12 +15,13 @@ class CreateCursosActividadesTable extends Migration
     {
         Schema::create('cursos-actividades', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo_actividad',5);
-            $table->foreign('codigo_actividad')->references('codigo_actividad')->on('actividades');
-            $table->string('codigo_curso',5);
-            $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos');
+            $table->unsignedInteger('id_curso');
+            $table->foreign('id_curso')->references('id')->on('cursos');
+            $table->unsignedInteger('id_actividad');
+            $table->foreign('id_actividad')->references('id')->on('actividades');
             $table->timestamps();
-        });
+        }); 
+        
     }
 
     /**
