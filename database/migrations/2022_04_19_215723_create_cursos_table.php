@@ -14,10 +14,10 @@ class CreateCursosTable extends Migration
     public function up()
     {
         Schema::create('cursos', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
-            $table->string('codigo',5)->primary()->unique();
-            $table->string('nombre',50);
-            $table->string('descripcion',200);
+            $table->id();
+            $table->string('codigo')->unique();
+            $table->string('nombre');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }

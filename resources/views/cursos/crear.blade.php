@@ -48,12 +48,13 @@
                                   </div>
                                  
                             </div>  
-
+                            
+                            <button type="submit" class="btn btn-primary">Guardar</button>
                                
                            </form>
                     
                            
-                               <button type="submit" class="btn btn-primary">Guardar</button>
+                              
                         
 
                         </div>

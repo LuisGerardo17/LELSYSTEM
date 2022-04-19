@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRecursosTable extends Migration
+class CreateActividadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateRecursosTable extends Migration
      */
     public function up()
     {
-        Schema::create('recursos', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
-            $table->string('codigo_recurso',5)->primary()->unique();
-            $table->string('nombre_recurso',50);
-            $table->string('descripcion',200);
+        Schema::create('actividades', function (Blueprint $table) {
+            $table->id();
+            $table->string('codigo')->unique();
+            $table->string('nombre');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateRecursosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recursos');
+        Schema::dropIfExists('actividades');
     }
 }
