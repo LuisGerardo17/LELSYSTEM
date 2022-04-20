@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\actividades;
+use App\Models\Actividad;
 use Illuminate\Http\Request;
 
 class ActividadesController extends Controller
@@ -24,7 +24,7 @@ class ActividadesController extends Controller
      */
     public function index()
     {
-        $actividades = Actividades::paginate(5);
+        $actividades = Actividad::paginate(5);
         return view('actividades.index', compact('actividades'));
     }
 
@@ -48,21 +48,21 @@ class ActividadesController extends Controller
     {
         
         request()->validate([
-            'codigo_actividad' => 'required|codigo_actividad|unique:actividades,codigo_actividad',
-            'nombre_curso' => 'required',
+            'codigo' => 'required',
+            'nombre' => 'required',
             'descripcion'=> 'required',
         ]);
-        Actividades::create($request->all());
+        Actividad::create($request->all());
         return redirect()->route('actividades.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\actividades  $actividades
+     * @param  \App\Models\Acctividad  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function show(actividades $actividades)
+    public function show()
     {
         //
     }
@@ -70,41 +70,41 @@ class ActividadesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\actividades  $actividades
+     * @param  \App\Models\Actividad  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function edit(actividades $actividades)
+    public function edit(Actividad $actividad)
     {
-        return view('actividades.editar', compact('actividades'));
+        return view('actividades.editar', compact('actividad'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\actividades  $actividades
+     * @param  \App\Models\Actividad  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, actividades $actividades)
+    public function update(Request $request, Actividad $actividad)
     {
         request()->validate([
-            'codigo_actividad' => 'required|codigo_actividad|unique:actividades,codigo_actividad',
-            'nombre_actividad' => 'required',
+            'codigo' => 'required',
+            'nombre' => 'required',
             'descripcion'=> 'required',
         ]);
-        $actividades->update($request->all());
+        $actividad->update($request->all());
         return redirect()->route('actividades.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\actividades  $actividades
+     * @param  \App\Models\Actividad  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function destroy(actividades $actividades)
+    public function destroy(Actividad $actividad)
     {
-        $actividades->delete();
+        $actividad->delete();
         return redirect()->route('actividades.index');
     }
 }

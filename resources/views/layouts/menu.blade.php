@@ -18,7 +18,7 @@
         <i class="fas fa-book"></i><span>Cursos</span>
     </a>
   
-    <a class="nav-link" href="/">
+    <a class="nav-link" href="/actividades">
         <i class="fas fa-pen"></i><span>Actividades</span>
     </a>
   

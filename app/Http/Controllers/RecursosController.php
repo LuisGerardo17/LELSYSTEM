@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\recursos;
+use App\Models\Recurso;
 use Illuminate\Http\Request;
 
 class RecursosController extends Controller
@@ -24,7 +24,7 @@ class RecursosController extends Controller
      */
     public function index()
     {
-        $recursos = Recursos::paginate(5);
+        $recursos = Recurso::paginate(5);
         return view('recursos.index', compact('recursos'));
     }
 
@@ -48,21 +48,21 @@ class RecursosController extends Controller
     {
           
         request()->validate([
-            'codigo_recurso' => 'required|codigo_recurso|unique:recursos,codigo_recurso',
-            'nombre_recurso' => 'required',
+            'codigo' => 'required',
+            'nombre' => 'required',
             'descripcion'=> 'required',
         ]);
-        Recursos::create($request->all());
+        Recurso::create($request->all());
         return redirect()->route('recursos.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\recursos  $recursos
+     * @param  \App\Models\Recursos  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function show(recursos $recursos)
+    public function show()
     {
         //
     }
@@ -73,9 +73,9 @@ class RecursosController extends Controller
      * @param  \App\Models\recursos  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function edit(recursos $recursos)
+    public function edit(Recurso $recurso)
     {
-        return view('recursos.editar', compact('recursos'));
+        return view('recursos.editar', compact('recurso'));
     }
 
     /**
@@ -85,26 +85,26 @@ class RecursosController extends Controller
      * @param  \App\Models\recursos  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, recursos $recursos)
+    public function update(Request $request, Recurso $recurso)
     {
          request()->validate([
-            'codigo_recurso' => 'required|codigo_recurso|unique:recursos,codigo_recurso',
-            'nombre_recurso' => 'required',
+            'codigo' => 'required',
+            'nombre' => 'required',
             'descripcion'=> 'required',
         ]);
-        $recursos->update($request->all());
+        $recurso->update($request->all());
         return redirect()->route('recursos.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\recursos  $recursos
+     * @param  \App\Models\Recurso  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(recursos $recursos)
+    public function destroy(Recurso $recurso)
     {
-        $recursos->delete();
+        $recurso->delete();
         return redirect()->route('recursos.index');
     }
 }
