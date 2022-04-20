@@ -11,4 +11,11 @@ class Actividad extends Model
 
     protected $fillable = ['codigo','nombre','descripcion'];
 
+    public function cursos() {
+  
+        return $this->belongsToMany(Curso::class,'curso_actividad');
+     }
+
+
+
 }

@@ -3,7 +3,7 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h3 class="page__heading">ADMINISTRADROR</h3></h3>
+            <h3 class="page__heading">ADMINISTRADOR</h3></h3>
         </div>
         <div class="section-body">
             <div class="row">
@@ -11,7 +11,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h3 class="text-center">Actividades</h3>
-                            @can('crear.actividad')
+                            @can('crear.curso')
                             <a class="btn btn-warning" href="{{route('actividades.create')}}">Nuevo</a>
                             @endcan
                           
@@ -39,7 +39,7 @@
                                            @endcan   
                                            @csrf
                                            @method('DELETE')
-                                           @can('borrar.actividades')
+                                           @can('borrar.actividad')
                                            <button type="submit" class="btn btn-danger">Borrar</button>   
                                            @endcan
                                         

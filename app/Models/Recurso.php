@@ -9,4 +9,14 @@ class Recurso extends Model
 {
     use HasFactory;
     protected $fillable = ['codigo','nombre','descripcion'];
+    
+
+    //RELACION MUCHOS A MUCHOS ENTRE LA TABLA CURSO Y RECURSO
+    public function cursos() {
+  
+        return $this->belongsToMany(Curso::class,'curso_recurso');
+     }
+
+
+
 }
