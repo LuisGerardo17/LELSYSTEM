@@ -51,13 +51,9 @@ Route::group(['middleware'=>['auth']],function(){
 Route::resource('roles',RolesController::class);
 Route::resource('usuarios',UsuariosController::class);
 Route::resource('cursos', CursosController::class);
-Route::resource('actividads', ActividadesController::class);
+Route::resource('actividades', ActividadesController::class);
 Route::resource('recursos', RecursosController::class);
 
 
 });
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
