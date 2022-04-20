@@ -62,12 +62,6 @@
                         Login
                     </button>
                 </div>
-
-                <div class="float-right">
-                    <a href="{{ route('register') }}" class="text-small">
-                        Aun no tienes cuenta? Registrate
-                    </a>
-                </div>
             </form>
         </div>
     </div>
