@@ -29,14 +29,14 @@ Route::get('/', function () {
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/home.home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Auth::routes();
 
 
 //CREACIÓN DE RUTAS PARA EL HOME PAGE
-Route::get('/home.home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/homepage.historia', [App\Http\Controllers\Historia::class, 'index'])->name('historia');
 Route::get('/homepage.vision', [App\Http\Controllers\vision::class, 'index'])->name('vision');
 Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->name('oferta');
