@@ -52,14 +52,14 @@ class ActividadesController extends Controller
             'nombre' => 'required',
             'descripcion'=> 'required',
         ]);
-        Actividad::create($request->all());
-        return redirect()->route('actividades.index');
+         Actividad::create($request->all());
+         return redirect()->route('actividades.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Acctividad  $actividades
+     * @param  \App\Models\Actividad  $actividades
      * @return \Illuminate\Http\Response
      */
     public function show()
@@ -70,7 +70,7 @@ class ActividadesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Actividad  $actividades
+     * @param  \App\Models\Actividad  $actividad
      * @return \Illuminate\Http\Response
      */
     public function edit(Actividad $actividad)
