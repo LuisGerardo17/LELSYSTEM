@@ -25,21 +25,21 @@
                            @endif
 
 
-                         <form action="{{route('cursos.update', $curso->id)}}"  method='POST'>
+                         <form action="{{route('cursos.update', $cursos->id)}}"  method='POST'>
                             @csrf
                            @method('PUT')
                            <div class="row">
                                <div class="col-xs-12 col-sm-12 col-md-12">
                                    <div class="form-group">
                                      <label for="codigo">Código</label>
-                                     <input type="text" name="codigo" class="form-control" value="{{$curso->codigo}}"> 
+                                     <input type="text" name="codigo" class="form-control" value="{{$cursos->codigo}}"> 
                                     </div> 
                                </div>
                               
                                <div class="col-xs-12 col-sm-12 col-md-12">
                                  <div class="form-group">
                                   <label for="nombre">Nombre</label>
-                                  <input type="text" name="nombre" class="form-control" value="{{$curso->nombre}}"> 
+                                  <input type="text" name="nombre" class="form-control" value="{{ $cursos->nombre }}"> 
                                  </div> 
                               
                                 </div>
@@ -47,7 +47,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                    <div class="form-floating">
                                        <label for="descripcion">Descripción</label>
-                                       <textarea class="form-control" name="descripcion" style="height:100px">{{$curso->descripcion}}</textarea>
+                                       <textarea class="form-control" name="descripcion" style="height:100px">{{ $cursos->descripcion }}</textarea>
                                     </div>
                                 </div>
                                

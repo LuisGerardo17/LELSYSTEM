@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cursos;
+use App\Models\Curso;
 use Illuminate\Http\Request;
 
 
@@ -12,7 +12,7 @@ class CursosController extends Controller
     function __construct()
     {
 
-        $this-> middleware('permission:ver-curso | crear-curso | editar-curso | borrar-curso', ['only'=>['index']]);
+        $this-> middleware('permission:ver-curso |crear-curso | editar-curso | borrar-curso', ['only'=>['index']]);
         $this-> middleware('permission:crear-curso', ['only'=>['create','store']]);
         $this-> middleware('permission:editar-curso', ['only'=>['edit','update']]);
         $this-> middleware('permission:borrar-curso', ['only'=>['destroy']]);
@@ -26,7 +26,7 @@ class CursosController extends Controller
      */
     public function index()
     {
-        $cursos = cursos::paginate(5);
+        $cursos = Curso::paginate(5);
         return view('cursos.index', compact('cursos'));
     }
 
@@ -46,21 +46,21 @@ class CursosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request  $request)
     {
        request()->validate([
-            'codigo' => 'required|codigo|unique:cursos,codigo',
+            'codigo' => 'required',
             'nombre' => 'required',
             'descripcion'=> 'required'
         ]);
-        cursos::create($request->all());
+        Curso::create($request->all());
         return redirect()->route('cursos.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\cursos  $cursos
+     * @param  \App\Models\Curso  $cursos
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -75,9 +75,9 @@ class CursosController extends Controller
      * @param  \App\Models\cursos  $cursos
      * @return \Illuminate\Http\Response
      */
-    public function edit(cursos $cursos)
+    public function edit(Curso $curso)
     {
-        return view('cursos.editar', compact('cursos'));
+        return view('cursos.editar', compact('curso'));
     }
 
     /**
@@ -85,17 +85,20 @@ class CursosController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
+     * 
+     * 
+
      * @param  \App\Models\cursos  $cursos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cursos $cursos)
+    public function update(Request $request, Curso $curso)
     {
         request()->validate([
-            'codigo' => 'required|codigo|unique:cursos,codigo',
+            'codigo' => 'required',
             'nombre' => 'required',
             'descripcion'=> 'required',
         ]);
-        $cursos->update($request->all());
+        $curso->update($request->all());
         return redirect()->route('cursos.index');
               
     }
@@ -107,9 +110,9 @@ class CursosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cursos $cursos)
+    public function destroy(Curso $curso)
     {
-        $cursos->delete();
+        $curso->delete();
         return redirect()->route('cursos.index');
                 
     }

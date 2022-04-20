@@ -42,13 +42,14 @@
                                   
                                   <div class="col-xs-12 col-sm-12 col-md-12">
                                       <div class="form-group">
-                                          <label for="descripcion">Descripcion</label>
-                                          <input type="text" class="form-control"  name="descripcion">
+                                        <label for="descripcion">Descripcion</label>
+                                        <textarea class="form-control" name="descripcion" style="height:100px"> </textarea>
+                                        
                                        </div> 
                                   </div>
                                  
                             </div>  
-                            
+                            <br>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                                
                            </form>
