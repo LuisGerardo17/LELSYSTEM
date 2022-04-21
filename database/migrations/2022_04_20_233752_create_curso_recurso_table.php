@@ -18,7 +18,7 @@ class CreateCursoRecursoTable extends Migration
             $table->unsignedInteger('curso_id');
             $table->foreign('curso_id')->references('id')->on('cursos');
             $table->unsignedInteger('actividad_id');
-            $table->foreign('actividad_id')->references('id')->on('actividades');
+            $table->foreign('actividad_id')->references('id')->on('actividads');
             $table->timestamps();
         });
     }
