@@ -31,6 +31,7 @@ class UsuariosController extends Controller
     public function index()
     {
       $usuarios= User::paginate(5);
+     
       return view('usuarios.index', compact('usuarios'));
     }
 
@@ -65,6 +66,7 @@ class UsuariosController extends Controller
 
          $user = User::create($input);
          $user->assignRole($request->$input('roles'));
+        
             return redirect()->route('usuarios.index');
         }
 

@@ -62,7 +62,7 @@ class ActividadesController extends Controller
      * @param  \App\Models\Actividad  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
         //
     }
@@ -73,9 +73,9 @@ class ActividadesController extends Controller
      * @param  \App\Models\Actividad  $actividad
      * @return \Illuminate\Http\Response
      */
-    public function edit(Actividad $actividad)
+    public function edit(Actividad $actividade )
     {
-        return view('actividades.editar', compact('actividad'));
+        return view('actividades.editar', compact('actividade'));
     }
 
     /**
@@ -85,14 +85,14 @@ class ActividadesController extends Controller
      * @param  \App\Models\Actividad  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Actividad $actividad)
+    public function update(Request $request , Actividad $actividade)
     {
         request()->validate([
-            'codigo' => 'required',
-            'nombre' => 'required',
-            'descripcion'=> 'required',
+            'codigo' =>'required',
+            'nombre' =>'required',
+            'descripcion'=>'required',
         ]);
-        $actividad->update($request->all());
+        $actividade->update($request->all());
         return redirect()->route('actividades.index');
     }
 
@@ -102,9 +102,9 @@ class ActividadesController extends Controller
      * @param  \App\Models\Actividad  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Actividad $actividad)
+    public function destroy(Actividad $actividade)
     {
-        $actividad->delete();
+        $actividade->delete();
         return redirect()->route('actividades.index');
     }
 }

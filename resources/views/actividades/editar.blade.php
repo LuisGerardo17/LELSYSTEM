@@ -25,21 +25,22 @@
                            @endif
 
 
-                         <form action="{{route('actividades.update', $actividad->id)}}"  method='POST'>
+                         <form action="{{route('actividades.update', $actividade->id)}}"  method='POST'>
+                            @method('PATCH')
                             @csrf
-                           @method('PUT')
+                          
                            <div class="row">
                                <div class="col-xs-12 col-sm-12 col-md-12">
                                    <div class="form-group">
                                      <label for="codigo">Código</label>
-                                     <input type="text" name="codigo" class="form-control" value="{{$actividad->codigo}}"> 
+                                     <input type="text" name="codigo" class="form-control" value="{{$actividade->codigo}}"> 
                                     </div> 
                                </div>
                               
                                <div class="col-xs-12 col-sm-12 col-md-12">
                                  <div class="form-group">
                                   <label for="nombre">Nombre</label>
-                                  <input type="text" name="nombre" class="form-control" value="{{ $actividad->nombre }}"> 
+                                  <input type="text" name="nombre" class="form-control" value="{{ $actividade->nombre }}"> 
                                  </div> 
                               
                                 </div>
@@ -47,12 +48,12 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                    <div class="form-group">
                                        <label for="descripcion">Descripción</label>
-                                       <textarea class="form-control" name="descripcion" style="height:100px">{{ $actividad->descripcion }}</textarea>
+                                       <textarea class="form-control" name="descripcion" style="height:100px">{{ $actividade->descripcion }}</textarea>
                                     </div>
                                 </div>
                                <br>
                                  
-                         </div>
+                             </div>
                            <button type="submit" class="btn btn-primary">Guardar</button>
                          </form>
 

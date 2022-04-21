@@ -35,7 +35,7 @@
                                     <td>
                                           <form action="{{route('actividades.destroy',$actividad->id)}}" method="POST">
                                            @can('editar.actividad')
-                                            <a class= "btn btn-info" href="{{route('actividades.edit',$actividad->id)}}">Editar</a>   
+                                            <a class= "btn btn-info" href="{{route('actividades.edit', $actividad->id)}}">Editar</a>   
                                            @endcan   
                                            @csrf
                                            @method('DELETE')

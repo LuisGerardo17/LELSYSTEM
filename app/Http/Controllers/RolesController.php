@@ -28,6 +28,7 @@ class RolesController extends Controller
     public function index()
     {
         $roles = Role::paginate(5);
+       
         return view('roles.index', compact('roles')); //platilla blade index
     }
 
