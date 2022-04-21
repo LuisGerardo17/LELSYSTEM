@@ -10,7 +10,7 @@ class RecursosController extends Controller
     function __construct()
     {
 
-        $this-> middleware('permission:ver-recurso | crear-recurso | editar-recurso | borrar-recurso', ['only'=>['index']]);
+        $this-> middleware('permission:ver-recurso|crear-recurso|editar-recurso|borrar-recurso', ['only'=>['index']]);
         $this-> middleware('permission:crear-recurso', ['only'=>['create','store']]);
         $this-> middleware('permission:editar-recurso', ['only'=>['edit','update']]);
         $this-> middleware('permission:borrar-recurso', ['only'=>['destroy']]);

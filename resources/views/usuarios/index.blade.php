@@ -28,7 +28,11 @@
                                         <td> {{$usuario->name}}</td>
                                         <td> {{$usuario->email}}</td>
                                          <td> 
-                                        
+                                            @if(!empty($usuario->getRoleNames()))
+                                            @foreach($usuario->getRoleNames() as $rolNombre)                                       
+                                              <h5><span class="badge badge-dark">{{ $rolNombre }}</span></h5>
+                                            @endforeach
+                                          @endif
                                         </td>
                                         <td>
                                            <a class="btn btn-info " href = "{{route('usuarios.edit', $usuario->id)}}">Editar</a>

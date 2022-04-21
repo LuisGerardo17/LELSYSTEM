@@ -23,17 +23,19 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
+Route::get('/auth', function () {
+    return view('auth.login');
 });
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home.home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 
 Auth::routes();
 
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //CREACIÓN DE RUTAS PARA EL HOME PAGE
 
@@ -53,7 +55,5 @@ Route::resource('usuarios',UsuariosController::class);
 Route::resource('cursos', CursosController::class);
 Route::resource('actividades', ActividadesController::class);
 Route::resource('recursos', RecursosController::class);
-
-
 });
 

@@ -98,7 +98,8 @@
 									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Iniciar Sesion</a>
 									</center>
 								</li>
-
+                                
+								
 								
 							</ul>
 
@@ -108,8 +109,6 @@
 			</nav>
 		</div>
 	</header>
-
-
 
 	<div class="carrucel">
 		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">

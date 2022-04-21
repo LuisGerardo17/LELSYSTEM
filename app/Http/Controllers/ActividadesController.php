@@ -11,7 +11,7 @@ class ActividadesController extends Controller
     function __construct()
     {
 
-        $this-> middleware('permission:ver-actividad | crear-actividad | editar-actividad | borrar-actividad', ['only'=>['index']]);
+        $this-> middleware('permission:ver-actividad|crear-actividad|editar-actividad|borrar-actividad', ['only'=>['index']]);
         $this-> middleware('permission:crear-actividad', ['only'=>['create','store']]);
         $this-> middleware('permission:editar-actividad', ['only'=>['edit','update']]);
         $this-> middleware('permission:borrar-actividad', ['only'=>['destroy']]);
