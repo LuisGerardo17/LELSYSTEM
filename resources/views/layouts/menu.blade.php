@@ -2,6 +2,10 @@
      <a class="nav-link" href="/home">
         <i class="fas fa-building" style='font-size:25px'></i><span>Dashboard</span>
      </a>
+
+     <a class="nav-link" href="/homepage">
+        <i class="fas fa-home" style='font-size:25px'></i><span>Homepage</span>
+     </a>
       <a class="nav-link" href="/usuarios">
         <i class=" fas fa-user" style='font-size:25px' ></i><span>Usuarios</span>
      </a>
@@ -20,7 +24,7 @@
      <a class="nav-link" href="/recursos">
         <i class="fas fa-laptop-code" style='font-size:25px'></i><span>Recursos</span>
      </a>
-     <a class="nav-link" href="/login">
+     <a class="nav-link" href="/">
         <i class="fas fa-sign-out-alt" style='font-size:25px'></i> <span>Salir</span>
 
      </a>

@@ -23,15 +23,15 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/auth', function () {
-    return view('auth.login');
+Route::get('/', function () {
+    return view('login');
 });
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-
+Route::get('/homepage', [App\Http\Controllers\HomepageController::class, 'index'])->name('homepage');
+Route::get('/auth.register', [App\Http\Controllers\Auth\LoginController::class, 'crear'])->name('login');
 Auth::routes();
 
 
@@ -43,8 +43,8 @@ Route::get('/homepage.historia', [App\Http\Controllers\Historia::class, 'index']
 Route::get('/homepage.vision', [App\Http\Controllers\vision::class, 'index'])->name('vision');
 Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->name('oferta');
 Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index'])->name('contactos');
-Route::get('/homepage.admisiones',   [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
-//Route::get('/auth.login', [App\Http\Controllers\Auth\LoginController::class, 'crear'])->name('login');
+Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
+//
 
 
 
