@@ -44,7 +44,7 @@
 						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="{{route('login')}}">Iniciar Sesion</a>
+						<a class="nav-link marign colorq" href="{{route('login')}}">Dashboard</a>
                     </li>
                   </ul>
 			</nav>
