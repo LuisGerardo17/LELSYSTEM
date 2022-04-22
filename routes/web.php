@@ -48,7 +48,7 @@ Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'ind
 
 
 
-//CREACION DE RUTAS PARA LOS CRUDS DEL MDULO ADMINISTRADOR
+//CREACION DE RUTAS PARA LOS CRUDS DEL MODULO ADMINISTRADOR
 Route::group(['middleware'=>['auth']],function(){
 Route::resource('roles',RolesController::class);
 Route::resource('usuarios',UsuariosController::class);
