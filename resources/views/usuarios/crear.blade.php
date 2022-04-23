@@ -59,7 +59,7 @@
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         </div>
-                        {!! Form::close() !!}
+                        {!! Form::close()!!}
                         </div>
                     </div>
                 </div>
