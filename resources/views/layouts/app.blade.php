@@ -38,6 +38,7 @@
         <div class="main-content">
             @yield('content')
         </div>
+        @yield('javascript-alert')
         <footer class="main-footer">
             @include('layouts.footer')
         </footer>
@@ -46,6 +47,7 @@
 
 @include('profile.change_password')
 @include('profile.edit_profile')
+
 
 </body>
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
@@ -62,6 +64,7 @@
 <script src="{{ mix('assets/js/profile.js') }}"></script>
 <script src="{{ mix('assets/js/custom/custom.js') }}"></script>
 @yield('page_js')
+
 @yield('scripts')
 <script>
     let loggedInUser =@json(\Illuminate\Support\Facades\Auth::user());

@@ -36,9 +36,9 @@
                                           <form action="{{route('recursos.destroy',$recurso->id)}}" id ='form-eliminar' method="POST">
                                            @can('editar.recurso')
                                             <a class= "btn btn-info" href="{{route('recursos.edit',$recurso->id)}}">Editar</a>   
-                                           @endcan   
+                                           @endcan 
+                                           @method('DELETE')  
                                            @csrf
-                                           @method('DELETE')
                                            @can('borrar.recursos')
                                            <button type="submit" class="btn btn-danger">Borrar</button>   
                                            @endcan
@@ -60,32 +60,33 @@
             </div>
         </div>
     </section>
+    
+
+
 @endsection
 
-
 @section('javascript-alert')
-<script type="text/javascript">
-   $('#form-eliminar').submit(function(e){
-     e.preventDefault();
-      Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-           
-            Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
-            'success'
-          )
-          this.submit();
-        }
-      })
-</script>
-
+    <script type="text/javascript">
+       $('#form-eliminar').submit(function(e){
+         e.preventDefault();
+          Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+              this.submit();
+            }
+          })
+        });
+    </script>
 @endsection
