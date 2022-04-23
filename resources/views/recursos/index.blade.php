@@ -67,7 +67,7 @@
 
 @section('javascript-alert')
     <script type="text/javascript">
-       $('#form-eliminar').submit(function(e){
+       $('#form-eliminar').submit(function(e)){
          e.preventDefault();
           Swal.fire({
             title: 'Are you sure?',
