@@ -37,7 +37,7 @@
                                         <td>
                                            <a class="btn btn-info " href = "{{route('usuarios.edit', $usuario->id)}}">Editar</a>
                                            {!! Form::open(['method'=> 'DELETE','route'=>['usuarios.destroy',$usuario->id], 'style'=>'display:inline']) !!}
-                                           {!!Form::submit('Borrar',['class'=>'btn btn-danger'])!!}
+                                           {!!Form::submit('Borrar',['class'=>'btn btn-danger' ] )  !!}
                                            {!! Form::close() !!}  
                                         </td>
                                     </tr>
@@ -59,3 +59,4 @@
         </div>
     </section>
 @endsection
+
