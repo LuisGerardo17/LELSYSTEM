@@ -35,10 +35,17 @@
                                           @endif
                                         </td>
                                         <td>
-                                           <a class="btn btn-info " href = "{{route('usuarios.edit', $usuario->id)}}">Editar</a>
-                                           {!! Form::open(['method'=> 'DELETE','route'=>['usuarios.destroy',$usuario->id], 'style'=>'display:inline']) !!}
-                                           {!!Form::submit('Borrar',['class'=>'btn btn-danger' ] )  !!}
-                                           {!! Form::close() !!}  
+                                            <form action="{{route('usuarios.destroy',$usuario->id)}}" method="POST">
+                                                @can('editar.usuario')
+                                                 <a class= "btn btn-info" href="{{route('usuarios.edit',$usuario->id)}}">Editar</a>   
+                                                @endcan   
+                                                @csrf
+                                                @method('DELETE')
+                                                @can('borrar.usuarios')
+                                                <button type="submit" class="btn btn-danger" onclick = "return  confirm('¿ Esta seguro de eliminar este Usuario?');">Borrar</button>   
+                                                @endcan
+                                             
+                                               </form>  
                                         </td>
                                     </tr>
                                       

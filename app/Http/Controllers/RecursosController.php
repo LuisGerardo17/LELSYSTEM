@@ -104,7 +104,11 @@ class RecursosController extends Controller
      */
     public function destroy(Recurso $recurso)
     {
+      
         $recurso->delete();
         return redirect()->route('recursos.index')->with('status_success','Registro eliminado correctamente!');
     }
+
+     
+
 }

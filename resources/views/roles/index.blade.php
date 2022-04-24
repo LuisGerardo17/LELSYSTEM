@@ -26,15 +26,16 @@
                             <td>{{$role->name}} </td>
                            
                             <td>
-                               @can('editar.rol')
-                               <a class="btn btn-primary " href = "{{route('roles.edit', $role->id)}}">Editar</a>
-                               @endcan
-                               
-                               @can('borrar.rol')
-                               {!! Form::open(['method'=> 'DELETE','route'=>['roles.destroy',$role->id], 'style'=>'display:inline']) !!}
-                               {!!Form::submit('Borrar',['class'=>'btn btn-danger'])!!}
-                               {!! Form::close() !!} 
-                               @endcan
+                                    <form action="{{route('roles.destroy',$role->id)}}" method="POST">
+                                      @can('editar.rol')
+                                      <a class= "btn btn-info" href="{{route('roles.edit',$role->id)}}">Editar</a>   
+                                      @endcan   
+                                      @csrf
+                                      @method('DELETE')
+                                      @can('borrar.roles')
+                                      <button type="submit" class="btn btn-danger" onclick = "return  confirm('¿ Esta seguro de eliminar este Rol?');">Borrar</button>   
+                                       @endcan
+                                     </form>  
                                
                             </td>
                           </tr>

@@ -45,7 +45,7 @@
 						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="{{route('login')}}">Iniciar Sesion</a>
+						<a class="nav-link marign colorq" href="{{route('login')}}">Dashboard</a>
 					</li>
 				</ul>
 			</nav>
@@ -93,7 +93,7 @@
 									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Iniciar Sesion</a></center>
+									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Dashboard</a></center>
 								</li>
 							</ul>
 
@@ -107,11 +107,11 @@
 	<main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="/">Principal</a></li>
+				<li class="breadcrumb-item"><a href="/homepage">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Oferta academica</li>
 			</ol>
 		</nav>
-		<h1 align="center" style="margin: 0;" class="py-3" ><b>Carreras Vigentes</b></h1>
+		<h1 align="center" style="margin: 0;" class="py-3" ><b>Cursos Vigentes</b></h1>
         <section class="pricing-section bg-1">
             <div class="pricing pricing--sonam">
                 <div class="pricing__item">
@@ -124,6 +124,7 @@
                         <li class="pricing__feature">Desarrolla aplicaciones moviles.</li>
                         <li class="pricing__feature">Desarrolla videojuegos.</li>
                     </ul>
+					   <a href="#">Ver más </a>
                 </div>
                 <div class="pricing__item">
                     <h3 class="pricing__title">Control de Incendios</h3>
@@ -135,6 +136,7 @@
                         <li class="pricing__feature">Orden publico.</li>
                         <li class="pricing__feature">Legislacion ciudadana.</li>
                     </ul>
+					    <a href="#">Ver más </a>
                 </div>
                 <div class="pricing__item">
                     <h3 class="pricing__title">&nbsp;Diseño &nbsp; de &nbsp; Modas&nbsp;</h3>
@@ -145,6 +147,7 @@
                         <li class="pricing__feature">Costos industriales.</li>
                         <li class="pricing__feature">Costura avanzada.</li>
                         <li class="pricing__feature">Eventos de moda.</li>
+						<a href="#">Ver más </a>
                     </ul>
                 </div>
             </div>

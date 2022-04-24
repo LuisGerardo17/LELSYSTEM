@@ -40,7 +40,7 @@
                                            @csrf
                                            @method('DELETE')
                                            @can('borrar.actividad')
-                                           <button type="submit" class="btn btn-danger">Borrar</button>   
+                                           <button type="submit" class="btn btn-danger" onclick = "return  confirm('¿ Esta seguro de eliminar esta Actividad?');">Borrar</button>   
                                            @endcan
                                         
                                           </form>  

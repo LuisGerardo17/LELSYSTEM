@@ -43,7 +43,7 @@
 						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="{{route('login')}}">Iniciar Sesion</a>
+						<a class="nav-link marign colorq" href="{{route('login')}}">Dashboard</a>
 					</li>
 				</ul>
 			</nav>
@@ -92,7 +92,7 @@
 									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Iniciar Sesion</a></center>
+									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Dashboard</a></center>
 								</li>
 							</ul>
 
@@ -108,7 +108,7 @@
 		<div class="breakups">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href ="/">Principal</a></li>
+					<li class="breadcrumb-item"><a href ="/homepage">Principal</a></li>
 					<li class="breadcrumb-item active" aria-current="page">Admisiones</li>
 				</ol>
 			</nav>
