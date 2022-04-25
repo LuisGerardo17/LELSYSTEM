@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 //agragamos los controladores
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsuariosController;
-use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\ActividadesController;
 use App\Http\Controllers\RecursosController;
@@ -29,9 +29,8 @@ Route::get('/', function () {
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('/homepage', [App\Http\Controllers\HomepageController::class, 'index'])->name('homepage');
-Route::get('/auth.register', [App\Http\Controllers\Auth\LoginController::class, 'crear'])->name('login');
+Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('register');
 Auth::routes();
 
 
