@@ -23,6 +23,6 @@ class InformaticaController extends Controller
      */
     public function index()
     {
-        return view('Docente.Informatica');
+        return view('docente.informatica');
     } 
 }
