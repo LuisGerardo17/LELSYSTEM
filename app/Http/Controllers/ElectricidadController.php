@@ -1,11 +1,10 @@
-
 <?php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MecanicaController extends Controller implements
+class ElectricidadController extends Controller
 {
      /**
      * Create a new controller instance.
@@ -24,6 +23,6 @@ class MecanicaController extends Controller implements
      */
     public function index()
     {
-        return view('Docente.Mecanica');
+        return view('docente.electricidad');
     } 
 }

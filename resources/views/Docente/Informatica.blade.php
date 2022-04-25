@@ -22,11 +22,10 @@
             <a href="#" class="logo"><b>PLATAFORMA @LELSYSTEM</b></a>
             <nav class="lista">
                 <ul>
-                    <li class="naa"><a href="#">
-                            <h5><b>Cerrar Sesion</b></h5>
+                    <li class="naa"><a href="{{route('oferta')}}">
+                            <h5><b>Oferta Académica</b></h5>
                         </a>
                     </li>
-                    <i class="cerrar icon ion-md-person"></i>
                 </ul>
             </nav>
         </div>
@@ -36,7 +35,7 @@
         <li><a href="#" class="viñeta">&nbsp;Archivos</a></li>
     </ul>
     <main>
-        <h1 align="center" class="malla"><b>Subir Archivos</b></h1>
+        <h1 align="center" class="malla"><b>CURSO DE INFORMÁTICA</b></h1>
         <section class="central">
             <div class="centro">
                 <iframe
@@ -85,8 +84,8 @@
             </div>
         </footer>
     </section>
-    <script src="../Js/prueba.js"></script>
-    <script src="../Js/script.js"></script>
+    <script src="../js/prueba.js"></script>
+    <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

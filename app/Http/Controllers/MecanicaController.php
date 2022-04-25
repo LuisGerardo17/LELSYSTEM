@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ElectricidadController extends Controller implements
+class MecanicaController extends Controller
 {
      /**
      * Create a new controller instance.
@@ -23,6 +23,6 @@ class ElectricidadController extends Controller implements
      */
     public function index()
     {
-        return view('Docente.Electricidad');
+        return view('docente.mecanica');
     } 
 }

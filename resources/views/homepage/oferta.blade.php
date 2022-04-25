@@ -125,7 +125,7 @@
                         <li class="pricing__feature">Programación básica y avanzada.</li>
                         <li class="pricing__feature">Desarrollo de sistemas .</li>
                     </ul>
-					<button class="btn btn-dark"><a href="{{route('Docente.Informatica')}}">Ver más</a></button>
+					<button class="btn btn-dark"><a href="{{route('informatica')}}">Ver más</a></button>
                 </div>
                 <div class="pricing__item">
                     <h3 class="pricing__title">Curso Mecánica</h3>
@@ -137,7 +137,7 @@
                         <li class="pricing__feature">Vehiculos híbridos y eléctricos.</li>
                         <li class="pricing__feature">Sensores y Actuadores.</li>
                     </ul>
-					<button class="btn btn-dark"><a href="#">Ver mas</a></button>
+					<button class="btn btn-dark"><a href="{{route('mecanica')}}">Ver más</a></button>
                 </div>
                 <div class="pricing__item">
                     <h3 class="pricing__title">Curso Electricidad</h3>
@@ -149,7 +149,7 @@
                         <li class="pricing__feature">Instalaciones electricas.</li>
                         <li class="pricing__feature">Circuitos</li>
                     </ul>
-					<button class="btn btn-dark"><a href="#">Ver más</a></button>
+					<button class="btn btn-dark"><a href="{{route('electricidad')}}">Ver más</a></button>
                 </div>
             </div>
         </section>

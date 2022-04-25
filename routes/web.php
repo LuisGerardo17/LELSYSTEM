@@ -47,9 +47,9 @@ Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'ind
 //
 
 //CREACIÓN DE RUTAS PARA DOCENTE
-Route::get('/Docente.Informatica', [App\Http\Controllers\Docente\InformaticaController::class, 'index'])->name('Informatica');
-Route::get('/Docente.Mecanica', [App\Http\Controllers\Docente\MecanicaController::class, 'index'])->name('Mecanica');
-Route::get('/Docente.Electricidad', [App\Http\Controllers\Docente\ElectricidadController::class, 'index'])->name('Electricidad');
+Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');
+Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class, 'index'])->name('mecanica');
+Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
 
 
 //CREACION DE RUTAS PARA LOS CRUDS DEL MODULO ADMINISTRADOR
