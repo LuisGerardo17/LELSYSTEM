@@ -16,7 +16,7 @@
 	<header>
 		<div id="fondo">
 			<a href="../../index.html">
-				<img src="static/img/logo.jpeg" class="logo" width="150px" alt="">
+				<img src="static/img/logo3.jpeg" class="logo" width="125px" alt="">
 			</a>
 			<nav class="menu">
 				<ul class="nav lista">

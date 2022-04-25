@@ -9,8 +9,9 @@
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="{{ asset('static/css/component.css')}}" />
-    <link rel="stylesheet" href="{{ asset('static/css/estilosfer.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('static/css/component2.css')}}" />
+    <link rel="stylesheet" href="{{ asset('static/css/estilos5.css')}}"/>
+    
 	<title>LELSYSTEM</title>
 </head>
 
@@ -18,7 +19,7 @@
 	<header>
 		<div id="fondo">
 			<a href="../index.html">
-				<img src="static/img/logo.jpeg" class="logo" width="150px" alt="">
+				<img src="static/img/logo3.jpeg" class="logo" width="125px" alt="">
 			</a>
 			<nav class="menu">
 				<ul class="nav lista">
@@ -30,13 +31,13 @@
 							</button>
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 								<li><a class="dropdown-item color" href="{{route('historia')}}">Historia</a></li>
-								<li><a class="dropdown-item color" href="{{route('vision')}}">Vision</a></li>
+								<li><a class="dropdown-item color" href="{{route('vision')}}">Visión</a></li>
 
 							</ul>
 						</div>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link marign">Oferta academica</a>
+						<a href="{{route('oferta')}}" class="nav-link marign">Oferta académica</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link marign" href="{{route('contactos')}}">Contactos</a>
@@ -45,7 +46,7 @@
 						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="{{route('login')}}">Dashboard</a>
+						<a class="nav-link marign colorq" href="/home">Dashboard</a>
 					</li>
 				</ul>
 			</nav>
@@ -78,7 +79,7 @@
 										</button>
 										<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 											<li><a class="dropdown-item colorbajo" href="{{route('historia')}}">Historia</a></li>
-											<li><a class="dropdown-item colorbajo" href="{{route('vision')}}">Vision</a></li>
+											<li><a class="dropdown-item colorbajo" href="{{route('vision')}}">Visión</a></li>
 
 										</ul>
 									</div>
@@ -93,7 +94,7 @@
 									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Dashboard</a></center>
+									<center><a class="blanco sesionesbajos" href="/home">Dashboard</a></center>
 								</li>
 							</ul>
 
@@ -115,40 +116,40 @@
         <section class="pricing-section bg-1">
             <div class="pricing pricing--sonam">
                 <div class="pricing__item">
-                    <h3 class="pricing__title">Desarrollo de Software</h3>
-                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/software.jpg" width="300px" height="200px"></div>
+                    <h3 class="pricing__title">Curso Informática</h3>
+                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/informatica.jpg" width="300px" height="200px"></div>
                     <p class="pricing__sentence">Postulate</p>
                     <ul class="pricing__feature-list">
-                        <li class="pricing__feature">Desarrolla paginas web.</li>
-                        <li class="pricing__feature">Crea animaciones.</li>
-                        <li class="pricing__feature">Desarrolla aplicaciones moviles.</li>
-                        <li class="pricing__feature">Desarrolla videojuegos.</li>
+                        <li class="pricing__feature">Informática básica.</li>
+                        <li class="pricing__feature">Seguridad informática.</li>
+                        <li class="pricing__feature">Programación básica y avanzada.</li>
+                        <li class="pricing__feature">Desarrollo de sistemas .</li>
                     </ul>
-					   <a href="#">Ver más </a>
+					<button class="btn btn-dark"><a href="{{route('Docente.Informatica')}}">Ver más</a></button>
                 </div>
                 <div class="pricing__item">
-                    <h3 class="pricing__title">Control de Incendios</h3>
-                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/extintor.jpg" width="300px" height="200px"></div>
+                    <h3 class="pricing__title">Curso Mecánica</h3>
+                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/mecanica.jpg" width="300px" height="200px"></div>
                     <p class="pricing__sentence">Postulate</p>
                     <ul class="pricing__feature-list">
-                        <li class="pricing__feature">Operaciones de rescate.</li>
-                        <li class="pricing__feature">Atencion Prehospitalaria.</li>
-                        <li class="pricing__feature">Orden publico.</li>
-                        <li class="pricing__feature">Legislacion ciudadana.</li>
+                        <li class="pricing__feature">Sistemas automotrices.</li>
+                        <li class="pricing__feature">Motores a gasolina y disiel.</li>
+                        <li class="pricing__feature">Vehiculos híbridos y eléctricos.</li>
+                        <li class="pricing__feature">Sensores y Actuadores.</li>
                     </ul>
-					    <a href="#">Ver más </a>
+					<button class="btn btn-dark"><a href="#">Ver mas</a></button>
                 </div>
                 <div class="pricing__item">
-                    <h3 class="pricing__title">&nbsp;Diseño &nbsp; de &nbsp; Modas&nbsp;</h3>
-                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/modas.png" width="300px" height="200px"></div>
+                    <h3 class="pricing__title">Curso Electricidad</h3>
+                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/electricidad.jpg" width="300px" height="200px"></div>
                     <p class="pricing__sentence">Postulate</p>
                     <ul class="pricing__feature-list">
-                        <li class="pricing__feature">Diseño creativo.</li>
-                        <li class="pricing__feature">Costos industriales.</li>
-                        <li class="pricing__feature">Costura avanzada.</li>
-                        <li class="pricing__feature">Eventos de moda.</li>
-						<a href="#">Ver más </a>
+                        <li class="pricing__feature">Tableros electricos.</li>
+                        <li class="pricing__feature">Motorores electricos.</li>
+                        <li class="pricing__feature">Instalaciones electricas.</li>
+                        <li class="pricing__feature">Circuitos</li>
                     </ul>
+					<button class="btn btn-dark"><a href="#">Ver más</a></button>
                 </div>
             </div>
         </section>

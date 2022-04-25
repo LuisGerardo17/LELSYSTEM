@@ -16,7 +16,7 @@
 	<header>
 		<div id="fondo">
 			<a href="../index.html">
-				<img src="static/img/logo.jpeg" class="logo" width="150px" alt="">
+				<img src="static/img/logo3.jpeg" class="logo" width="125px" alt="">
 			</a>
 			<nav class="menu">
 				<ul class="nav lista">
@@ -29,7 +29,7 @@
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 								<li><a class="dropdown-item color"
 										href="{{route('historia')}}">Historia</a></li>
-								<li><a class="dropdown-item color" href="{{route('vision')}}">vision</a>
+								<li><a class="dropdown-item color" href="{{route('vision')}}">Visión</a>
 								</li>
 
 							</ul>

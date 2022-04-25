@@ -16,7 +16,7 @@
 <body>
 	<header>
 		<div id="fondo">
-			<img src="img/logo.jpeg" class="logo" width="150px" alt="">
+			<img src="static/img/logo3.jpeg" class="logo" width="125px" alt="">
 			<nav class="menu">
 				<ul class="nav lista">
 					<li class="nav-item">
@@ -28,7 +28,7 @@
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 								<li><a class="dropdown-item color"
 										href="{{route('historia')}}">Historia</a></li>
-								<li><a class="dropdown-item color" href="{{route('vision')}}">vision</a>
+								<li><a class="dropdown-item color" href="{{route('vision')}}">Visión</a>
 								</li>
 
 							</ul>
@@ -99,9 +99,7 @@
 									</center>
 								</li>
                                 
-								
-								
-							</ul>
+								</ul>
 
 						</div>
 					</div>

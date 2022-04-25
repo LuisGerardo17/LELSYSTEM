@@ -1,0 +1,122 @@
+
+.container{
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.logo{
+    letter-spacing: 5px;
+    font-size: 1rem;;
+}
+
+.cabecera{
+    background-color: rgb(62, 65, 68);
+    color: white;
+    padding: 2rem;
+}
+.cabecera a{
+    color: rgb(238, 241, 243);
+    text-decoration: none;
+}
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lista ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lista ul li{
+    display: inline-block;
+}
+.lista ul li a{
+    display: block;
+    padding: 0.5rem;
+    transition: all 0.5s linear;
+    border-radius: 25px;
+}
+.lista ul li a:hover{
+    background: rgb(105, 103, 103);
+}
+.btn{
+    border-radius: 4px;
+}
+.malla{
+    font-family: times;
+    font-size: 1.9rem;
+    color: gray;
+}
+.default, th, td{
+        border: 2px solid rgb(17, 17, 17);
+        border-collapse: collapse;
+        font-family: monospace;
+}
+nav li ul {
+    display: none;
+    position:absolute;
+    min-width: 170px;
+}
+nav ul li {
+    position: relative;
+}
+nav li:hover > ul{
+    display:block;
+    visibility: visible;
+}
+nav ul li ul{
+    background-color: rgb(62, 65, 68);
+    border: 1px solid rgb(62, 65, 68);
+    line-height: unset;
+
+}
+.boton{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+    padding: 5px 10px;
+    background-color:rgba(89, 98, 98, 0.662);
+    border-radius: 25px;
+}
+.boton:hover{
+    background-color: #f0f0f0;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+}
+.boton:hover{
+    background-color: #224fff;
+    color: #020202;
+    font-weight: bold;
+    box-shadow: #224fff -1px 1px,  #224fff -2px 2px, #224fff -3px 3px,  #224fff -4px 4px,  #224fff -5px 5px,  #224fff -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+.home{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    font-size: 1.2rem;
+}
+.tareas{
+    font-size: 25px;
+}
+.central{
+    background: rgba(255, 255, 255, 0.523);
+    padding:20px;
+    margin: 50px 350px;
+}
+.deber{
+    background-color: rgba(59, 94, 151, 0.555);
+}
+.centro{
+    max-width: 900px;
+}
+.centro a{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(0, 0, 0);
+}
