@@ -19,7 +19,7 @@
 	<header>
 		<div id="fondo">
 			<a href="../index.html">
-				<img src="static/img/logo3.jpeg" class="logo" width="125px" alt="">
+				<img src="static/img/logo5.png" class="logo" width="135px" alt="">
 			</a>
 			<nav class="menu">
 				<ul class="nav lista">
@@ -118,7 +118,7 @@
                 <div class="pricing__item">
                     <h3 class="pricing__title">Curso Informática</h3>
                     <div class="pricing__price"><span class="pricing__currency"><img src="static/img/informatica.jpg" width="300px" height="200px"></div>
-                    <p class="pricing__sentence">Postulate</p>
+                    <p class="pricing__sentence">Temas</p>
                     <ul class="pricing__feature-list">
                         <li class="pricing__feature">Informática básica.</li>
                         <li class="pricing__feature">Seguridad informática.</li>
@@ -130,7 +130,7 @@
                 <div class="pricing__item">
                     <h3 class="pricing__title">Curso Mecánica</h3>
                     <div class="pricing__price"><span class="pricing__currency"><img src="static/img/mecanica.jpg" width="300px" height="200px"></div>
-                    <p class="pricing__sentence">Postulate</p>
+                    <p class="pricing__sentence">Temas</p>
                     <ul class="pricing__feature-list">
                         <li class="pricing__feature">Sistemas automotrices.</li>
                         <li class="pricing__feature">Motores a gasolina y disiel.</li>
@@ -142,7 +142,7 @@
                 <div class="pricing__item">
                     <h3 class="pricing__title">Curso Electricidad</h3>
                     <div class="pricing__price"><span class="pricing__currency"><img src="static/img/electricidad.jpg" width="300px" height="200px"></div>
-                    <p class="pricing__sentence">Postulate</p>
+                    <p class="pricing__sentence">Temas</p>
                     <ul class="pricing__feature-list">
                         <li class="pricing__feature">Tableros electricos.</li>
                         <li class="pricing__feature">Motorores electricos.</li>
