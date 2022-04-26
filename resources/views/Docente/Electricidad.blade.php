@@ -50,7 +50,7 @@
                 <img id="imagenPrevisualizacion" align="center"><br><br>
 
                 <input type="file" id="seleccionArchivos" class="aceptar" accept="image/*" width="300px" height="300px">
-                <a href="archivos_electricidad.html"><button type="button" class="aceptar">&nbsp;&nbsp;&nbsp;&nbsp;<i
+                <a href="{{route('electricidad')}}"><button type="button" class="aceptar">&nbsp;&nbsp;&nbsp;&nbsp;<i
                             class="recargar icon ion-md-close"></i>
                         &nbsp;&nbsp;&nbsp;</button></a>
 
