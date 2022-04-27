@@ -9,10 +9,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="card-body">    
-                            <h3 class="text-center">Crear Usuario</h3>
-
-                            @if ($errors->any())                                                
+                     <div class="card-body">    
+                         <h3 class="text-center">Crear Usuario</h3>
+                        @if ($errors->any())                                                
                             <div class="alert alert-dark alert-dismissible fade show" role="alert">
                             <strong>¡Revise los campos!</strong>                        
                                 @foreach ($errors->all() as $error)                                    
@@ -22,8 +21,9 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                             </div>
-                           @endif
-                       {!! Form::open(array('route' => 'usuarios.store','method'=>'POST')) !!}
+                        @endif
+
+                        {!! Form::open(array('route' => 'usuarios.store','method'=>'POST')) !!}
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
@@ -55,11 +55,11 @@
                                     {!! Form::select('roles[]', $roles,[], array('class' => 'form-control')) !!}
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                              <div class="col-xs-12 col-sm-12 col-md-12">
                                 <button type="submit" class="btn btn-primary">Guardar</button>
-                            </div>
+                              </div>
                         </div>
-                        {!! Form::close()!!}
+                        {!! Form::close() !!}
                         </div>
                     </div>
                 </div>
