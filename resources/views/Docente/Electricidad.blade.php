@@ -19,7 +19,7 @@
 <body>
     <header class="cabecera">
         <div class="container logo-container">
-            <a href="#" class="logo"><b>PLATAFORMA @LELSYSTEM</b></a>
+            <a href="#" ><img src="static/img/logo5.png" class="logo" width="135px" alt=""></a>
             <nav class="lista">
                 <ul>
                     <li class="naa"><a href="{{route('oferta')}}">
