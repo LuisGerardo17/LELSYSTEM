@@ -28,7 +28,7 @@
 							</button>
 							<ul class="dropdown-menu menua" aria-labelledby="dropdownMenuButton1">
 								<li><a class="dropdown-item color" href="#">Historia</a></li>
-								<li><a class="dropdown-item color" href="{{route('vision')}}">Vision</a></li>
+								<li><a class="dropdown-item color" href="{{route('vision')}}">Visión</a></li>
 
 							</ul>
 						</div>
