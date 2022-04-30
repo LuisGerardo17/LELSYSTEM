@@ -60,3 +60,11 @@ Route::resource('actividades', ActividadesController::class);
 Route::resource('recursos', RecursosController::class);
 });
 
+//ADMIN
+Route::get('/admin', [AdminController::class,'index'])
+->middleware('auth.admin')
+->name('admin.index');
+
+
+
+
