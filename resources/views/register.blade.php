@@ -38,6 +38,23 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Rol:</label><span
+                                    class="text-danger">*</span>
+                            <input id="rol" type="rol"
+                                   class="form-control{{ $errors->has('rol') ? ' is-invalid' : '' }}"
+                                   placeholder="Enter rol" name="rol" tabindex="2"
+                                   value="{{ old('rol') }}"
+                                   required autofocus>
+                            <div class="invalid-feedback">
+                                {{ $errors->first('rol') }}
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="password" class="control-label">Password
