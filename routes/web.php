@@ -2,12 +2,13 @@
 
 
 use Illuminate\Support\Facades\Route;
-//agragamos los controladores
+//los controladores
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\ActividadesController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RecursosController;
 use App\Http\Controllers\RolesController;
 use Illuminate\Support\Facades\Auth;
@@ -60,7 +61,7 @@ Route::resource('actividades', ActividadesController::class);
 Route::resource('recursos', RecursosController::class);
 });
 
-//ADMIN
+//ruta para el administrador
 Route::get('/admin', [AdminController::class,'index'])
 ->middleware('auth.admin')
 ->name('admin.index');
