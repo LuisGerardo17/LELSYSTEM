@@ -45,7 +45,7 @@
                                     class="text-danger">*</span>
                             <input id="rol" type="rol"
                                    class="form-control{{ $errors->has('rol') ? ' is-invalid' : '' }}"
-                                   placeholder="Enter rol" name="rol" tabindex="2"
+                                   placeholder="Enter rol" name="rol" tabindex="1"
                                    value="{{ old('rol') }}"
                                    required autofocus>
                             <div class="invalid-feedback">
