@@ -40,6 +40,20 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
+                            <label for="rol" class="control-label">Rol
+                                :</label><span
+                                    class="text-danger">*</span>
+                            <input id="rol" type="rol"
+                                   class="form-control{{ $errors->has('rol') ? ' is-invalid': '' }}"
+                                   placeholder="Set account rol" name="rol" tabindex="2" required>
+                            <div class="invalid-feedback">
+                                {{ $errors->first('rol') }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
                             <label for="password" class="control-label">Password
                                 :</label><span
                                     class="text-danger">*</span>
@@ -51,6 +65,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="password_confirmation"

@@ -46,8 +46,9 @@
 						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="/home">Dashboard</a>
+						<a class="nav-link marign colorq" href="/">Dashboard</a>
 					</li>
+					
 				</ul>
 			</nav>
 			<br><br><br><br>
@@ -94,7 +95,11 @@
 									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="/home">Dashboard</a></center>
+									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Login</a></center>
+								</li>
+
+								<li class="nav-item ">
+									<center><a class="blanco sesionesbajos" href="{{route('register')}}">Register</a></center>
 								</li>
 							</ul>
 
@@ -108,7 +113,7 @@
 	<main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="/homepage">Principal</a></li>
+				<li class="breadcrumb-item"><a href="/home">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Oferta academica</li>
 			</ol>
 		</nav>
