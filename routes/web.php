@@ -31,11 +31,9 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/homepage', [App\Http\Controllers\HomepageController::class, 'index'])->name('homepage');
-Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('register');
+Route::get('/auth.register', [App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('register');
 Auth::routes();
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //CREACIÓN DE RUTAS PARA EL HOME PAGE
 
