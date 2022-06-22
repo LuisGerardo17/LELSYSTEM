@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="float-right">
-                            <a href="{{ route('register') }}" class="text-small">
+                            <a href="{{ route('auth.register') }}" class="text-small">
                                 Aun no tienes cuenta? Registrate.
                             </a>
                 </div>
