@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="float-right">
-                            <a href="/register" class="text-small">
+                            <a href="" class="text-small">
                                 Aun no tienes cuenta? Registrate.
                             </a>
                         </div>
